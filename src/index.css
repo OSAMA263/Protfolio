@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  font-family: "Courier", monospace;
+  -webkit-font-smoothing: none;
+  background-color: #111111;
+  user-select: none;
+  color: white;
+  background-image: url("../public/background.png");
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.parent::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  scroll-behavior: inherit;
+  display: none;
+}
+img,
+svg,
+a,
+input,
+textarea {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  max-width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+p {
+  color: #d4d4d4;
+}
+textarea {
+  resize: none;
+}
+.text-balance {
+  text-wrap: balance;
+}
+.scroll-snap {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100dvh;
+}
+.myself-wrapper:has(span:is(:hover)) h1{
+color: #838383;
+}
+/* myskills left section*/
+.logo-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50px;
+  height: 200%;
+  background: rgba(204, 204, 204, 0.5);
+  transform: translate(-100%, -50%) skew(-45deg);
+  transition: all 0.9s ease-in-out;
+}
+.logo-wrapper:hover::after {
+  left: 100%;
+  transform: translate(50%, 50%) skew(-45deg);
+}
+/* my skills right section */
+.reveal-skills-info-wrapper::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(transparent, #17171769);
+  width: 100%;
+  height: 30px;
+  left: 10px;
+  bottom: 0;
+}
+/* ------navlinks---------- */
+a.active > small,
+a.active > small:hover {
+  scale: 1.7;
+  background: #0aff9d;
+  border: solid 2px #0aff9d;
+  rotate: 0deg;
+}
+a > small:hover,
+li:has(h1 > a:not(.active):is(:hover)) a > small {
+  scale: 1.2;
+  background: #6b7280;
+  border: solid 2px #6b7280;
+  rotate: 135deg;
+}
+a:has(> small:is(:hover)) + h1,
+h1:has(a:not(.active):is(:hover)) {
+  transform: translateX(0px);
+  opacity: 1;
+  color: #6b7280;
+}
+h1:has(> a.active),
+a.active:has(> small:is(:hover)) + h1 {
+  transform: translateX(0px);
+  opacity: 1;
+  color: white;
+}
+/* ----small d---- */
+.menu-ul {
+  overflow: hidden;
+  padding-inline: 8px;
+  position: relative;
+}
+.menu-ul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 25px;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #171717,
+    #1717171f,
+    transparent,
+    transparent
+  );
+}
+.menu-ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 30px;
+  height: 100%;
+  z-index: 4;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    transparent,
+    #1717171f,
+    #171717
+  );
+}
+
+/* -------nav toggle btn------- */
+button.active > .mid {
+  width: 0px;
+}
+button.active > .first {
+  transform: rotate(45deg);
+}
+button.active > .last {
+  transform: rotate(-45deg);
+}
+/* ------contact me----- */
+textarea,
+input {
+  outline: none;
+  border: 1px solid #18865a75;
+  background-color: #1f1f1f;
+  padding-inline: 10px;
+  padding-block: 13px;
+  width: 100%;
+}
+textarea:focus,
+input:focus {
+  box-shadow: 0px 0px 9px 1px #09ff9d80;
+  border: 1px solid #18865a;
+}
+#submit::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 120px;
+  height: 300%;
+  background: linear-gradient(
+    to right,
+    #0cf59804,
+    #0acf8038,
+    #0acf80b2,
+    #0acf8038,
+    #0cf59804
+  );
+  transform: translate(-100%, -50%) skew(-45deg);
+  transition: all 0.8s ease-in-out;
+}
+#submit:hover::after {
+  left: 100%;
+  transform: translate(50%, 50%) skew(-45deg);
+}
+.chakra-form-control:has(input:focus) > label,
+.chakra-form-control:has(textarea:focus) > label {
+  color: white !important;
+}
+/* --------validation */
+textarea.invalid-input:focus,
+input.invalid-input:focus {
+  box-shadow: 0px 0px 9px 1px #00000000;
+  border: 1px solid #861818a4;
+}
+.invalid-input{
+  border: 1px rgba(65, 0, 0, 0.685) solid;
+}
