@@ -41,7 +41,7 @@ export default function Form() {
       render: () => (
         <Toast>
           <p>Thanks You</p>
-          <p>Your massage has been delivered successfully.</p>
+          <p>Your message has been delivered successfully.</p>
         </Toast>
       ),
     });
@@ -106,21 +106,21 @@ export default function Form() {
         </FormControl>
 
         <FormControl {...formAnimation} custom={2} as={motion.div}>
-          <FormLabel htmlFor="massage">Your Massage</FormLabel>
+          <FormLabel htmlFor="message">Your message</FormLabel>
           <motion.textarea
             className={`max-sm:p-2 ${
-              errors.massage && touched.massage && "invalid-input"
+              errors.message && touched.message && "invalid-input"
             }`}
             onChange={handleChange}
             onBlur={handleBlur}
-            value={values.massage}
-            id="massage"
-            name="massage"
+            value={values.message}
+            id="message"
+            name="message"
             rows="6"
           ></motion.textarea>
           <FormHelperText>
             <p className="text-[#595e69] text-[10px">
-              {errors.massage && touched.massage && errors.massage}
+              {errors.message && touched.message && errors.message}
             </p>
           </FormHelperText>
         </FormControl>

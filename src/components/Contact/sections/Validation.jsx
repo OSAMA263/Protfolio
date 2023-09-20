@@ -17,8 +17,8 @@ export const validationSchema = yup.object({
     .string()
     .email("Invalid email, please enter a valid email.")
     .required("Email required!"),
-  massage: yup
+  message: yup
     .string()
-    .min(15, "Your massage must contain at least 15 characters.")
-    .required("Massage required!"),
+    .min(15, "Your message must contain at least 15 characters.")
+    .required("message required!"),
 });
