@@ -1,11 +1,15 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import tw from "tailwind-styled-components";
 
 export default function PageWrapper({ children, id }) {
+  const page = useRef(null);
+  const isInView = useInView(page, { once: true });
+
   return (
     <Section id={id}>
-      <RevealPage {...motionVariants} $id={id}>
-        {children}
+      <RevealPage ref={page} {...motionVariants} $id={id}>
+        {isInView && children}
       </RevealPage>
     </Section>
   );
