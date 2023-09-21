@@ -1,7 +1,7 @@
 import ContentWrapper from "../../Global-Comps/futures/ContentWrapper";
 import PageWrapper from "../../Global-Comps/futures/PageWrapper";
 import SectionHeader from "../../Global-Comps/futures/SectionHeader";
-import Form from "./sections/Form";
+import FormWrapper from "./sections/FormWrapper";
 
 export default function Contact() {
   return (
@@ -10,7 +10,7 @@ export default function Contact() {
         <SectionHeader>
           <p className="text-sm">Get In Touch</p> Contact Me
         </SectionHeader>
-        <Form></Form>
+        <FormWrapper></FormWrapper>
       </ContentWrapper>
     </PageWrapper>
   );

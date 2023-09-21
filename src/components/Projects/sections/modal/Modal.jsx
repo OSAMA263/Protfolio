@@ -43,7 +43,7 @@ export default function Modal(props) {
               <div className="flex justify-center items-end">
                 <h1 className="text-xl">
                   {projectName[projectInd]}
-                  {projectInd == 2 && "(frist project)"}_____{"\u00A0"}
+                  {projectInd == 2 && "(my first project)"}_____{"\u00A0"}
                 </h1>
 
                 <Links href={projectURL[projectInd].github} target="_blank">

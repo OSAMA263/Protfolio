@@ -4,7 +4,7 @@ import * as yup from "yup";
 export const initialValues = {
   name: "",
   email: "",
-  massage: "",
+  message: "",
 };
 
 export const validationSchema = yup.object({

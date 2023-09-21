@@ -1,8 +1,8 @@
 import tw from "tailwind-styled-components";
 import { motion } from "framer-motion";
 
-export default function LetterReveal({children, letter_i, Y = 0, opaDelay, opaSpeed, opaWaitTime}) {
-
+export default function LetterReveal(props) {
+const {children, letter_i, Y = 0, opaDelay, opaSpeed, opaWaitTime}=props
   return (
     <Letter
       custom={{ letter_i, opaDelay, opaSpeed, opaWaitTime, Y }}

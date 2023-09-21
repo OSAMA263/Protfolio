@@ -15,7 +15,7 @@ export default function About() {
           <Text>
             <SectionHeader>About Me</SectionHeader>
             {text.map((line, line_i) => (
-              <div className="w-fit 2xl:leading-relaxed xl:leading-normal lg:leading-tight leading-relaxed" key={line_i}>
+              <div className="w-fit 2xl:leading-relaxed xl:leading-normal lg:leading-tight" key={line_i}>
                 {line
                   .replaceAll("-", `${"\u00A0"}`)
                   .split(" ")
@@ -54,7 +54,7 @@ xl:gap-x-10
 gap-x-2
 lg:grid-cols-2
 lg:gap-y-0
-gap-y-10
+gap-y-0
 max-[375px]:!grid-rows-1
 `;
 
@@ -62,7 +62,6 @@ const Text = tw(motion.div)`
 flex
 flex-col   
 lg:-tracking-wide
-
 justify-between
 `;
 
@@ -75,12 +74,12 @@ max-[375px]:hidden
 `;
 
 const text = [
-  "Hello -again!",
-  "As -a -frontend -developer, -ReactJS -is -a -tool -I -frequently -utilize -in -my -work,",
-  "aside -from -some -libraries -and -packages -like -Tailwind, -Framer -Motion, -and -others",
-  "I -graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree",
-  "in -information -systems.",
-  "I -enjoy -finding -bugs -and -staying -up -all -night -to -fix -them -it's -so -much -fun...yep.",
-  "I'm -trying -to -find -a -job -where -I -can -be -trusted, -learn -more, -enhance -my -skills,",
-  "and -gain -guidance -from -more -experienced -employees.",
+  "Hello - again!",
+  "As - a - frontend - developer, - ReactJS - is - a - tool - I - frequently - utilize - in - my - work,",
+  "aside - from - some - libraries - and - packages - like - Tailwind, - Framer - Motion, - and - others.",
+  "I - graduated - from - Delta - Academy - of - Science - with - a - bachelor's - degree",
+  "in - information - systems.",
+  "I - enjoy - finding - bugs - and - staying - up - all - night - to - fix - them - it's - so - much - fun...yep.",
+  "I'm - trying - to - find - a - job - where - I - can - be - trusted, - learn - more, - enhance - my - skills,",
+  "and - gain - guidance - from - more - experienced - employees.",
 ];

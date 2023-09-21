@@ -15,7 +15,7 @@ export default function Pictures(props) {
         alt={ele.pc[i]}
         src={projectPics[projectInd].pc[i]}
         placeholder={
-          <div className="flex justify-center items-center p-24">
+          <div className="flex items-center justify-center p-24">
             <Spinner size="xl" className="!p-24 text-4xl"></Spinner>
           </div>
         }
