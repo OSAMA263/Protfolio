@@ -2,14 +2,15 @@ import { FormControl, FormHelperText, FormLabel } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 
-export default function FormInputs({formik }) {
-  const { handleBlur, handleChange, values, touched, errors } =
-    formik;
+export default function FormInputs({ formik }) {
+  const { handleBlur, handleChange, values, touched, errors } = formik;
 
   return (
     <>
       <FormControl {...formAnimation} custom={0} as={motion.div}>
-        <FormLabel className="cursor-none" htmlFor="name">Name</FormLabel>
+        <FormLabel className="cursor-none" htmlFor="name">
+          Name
+        </FormLabel>
         <input
           className={`max-sm:p-2 ${
             errors.name && touched.name && "invalid-input"
@@ -29,7 +30,9 @@ export default function FormInputs({formik }) {
       </FormControl>
 
       <FormControl {...formAnimation} custom={1} as={motion.div}>
-        <FormLabel className="cursor-none" htmlFor="email">Email</FormLabel>
+        <FormLabel className="cursor-none" htmlFor="email">
+          Email
+        </FormLabel>
         <input
           className={`max-sm:p-2 ${
             errors.email && touched.email && "invalid-input"
@@ -49,9 +52,11 @@ export default function FormInputs({formik }) {
       </FormControl>
 
       <FormControl {...formAnimation} custom={2} as={motion.div}>
-        <FormLabel className="cursor-none" htmlFor="message">Your message</FormLabel>
+        <FormLabel className="cursor-none" htmlFor="message">
+          Your message
+        </FormLabel>
         <motion.textarea
-          className={`max-sm:p-2 ${
+          className={`max-sm:p-2 resize-none ${
             errors.message && touched.message && "invalid-input"
           }`}
           onChange={handleChange}
