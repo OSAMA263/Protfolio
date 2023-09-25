@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
+  cursor: none;
   margin: 0;
   padding: 0;
   width: 100dvw;
@@ -27,7 +28,9 @@ img,
 svg,
 a,
 input,
-textarea {
+textarea,
+button {
+  cursor: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -51,8 +54,8 @@ textarea {
   scroll-snap-stop: always;
   height: 100dvh;
 }
-.myself-wrapper:has(span:is(:hover)) h1{
-color: #838383;
+.myself-wrapper:has(span:is(:hover)) h1 {
+  color: #838383;
 }
 /* myskills left section*/
 .logo-wrapper::after {
@@ -204,6 +207,6 @@ input.invalid-input:focus {
   box-shadow: 0px 0px 9px 1px #00000000;
   border: 1px solid #861818a4;
 }
-.invalid-input{
+.invalid-input {
   border: 1px rgba(65, 0, 0, 0.685) solid;
 }

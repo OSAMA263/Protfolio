@@ -23,9 +23,9 @@ const LetterVarinats = {
     opacity: 0,
   }),
   whileHover: {
-    opacity: [0, 1],
+    opacity: [0,0, 1],
     transition: {
-      duration: 0.3,
+      duration: 0.4,
     },
   },
   whileInView: ({ letter_i, opaDelay, opaSpeed, opaWaitTime }) => ({

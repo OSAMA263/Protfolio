@@ -25,7 +25,7 @@ export default function Modal(props) {
         <AlertDialogOverlay>
           <AlertDialogContent maxW={1200} className={ModalContentStyles}>
             {/* header */}
-            <AlertDialogHeader className="text-end mb-2">
+            <AlertDialogHeader className="mb-2 text-end">
               <button
                 className="[&>svg]:hover:text-gray-600"
                 onClick={handle_close_modal}
@@ -40,7 +40,7 @@ export default function Modal(props) {
             {/* footer */}
             <AlertDialogFooter className="!justify-start mt-1">
               {/* project links */}
-              <div className="flex justify-center items-end">
+              <div className="flex items-end justify-center">
                 <h1 className="text-xl">
                   {projectName[projectInd]}
                   {projectInd == 2 && "(my first project)"}_____{"\u00A0"}

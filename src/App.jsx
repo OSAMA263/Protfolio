@@ -5,17 +5,20 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Skills from "./components/Skills/Skills";
 import { ChakraProvider } from "@chakra-ui/react";
+import AppWrapper from "./Global-Comps/AppWrapper";
 
 function App() {
   return (
     <>
       <ChakraProvider disableGlobalStyle={true}>
-        <Home />
-        <Navbar />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <AppWrapper>
+          <Home />
+          <Navbar />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </AppWrapper>
       </ChakraProvider>
     </>
   );

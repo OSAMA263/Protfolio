@@ -22,9 +22,11 @@ const motionVariants = {
 };
 
 const RevealPage = tw(motion.div)`
-${(p) => p.$id === "home" && "!w-[98%] !mx-0"}
+${(p) => p.$id === "home" && "!w-[100%] !mx-0"}
   flex
+  flex-col
   h-[98%]
+  justify-center
   my-auto
   lg:w-[80%]
   w-full

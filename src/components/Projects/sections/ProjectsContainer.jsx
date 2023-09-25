@@ -73,7 +73,6 @@ overflow-hidden
 transition-all
 duration-500
 rounded-xl
-cursor-pointer
 [&>picture>img]:hover:scale-[1.02]
 [&>picture>img]:brightness-[.5]
 [&>picture>img]:hover:brightness-[.9]

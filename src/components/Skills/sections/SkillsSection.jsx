@@ -2,7 +2,7 @@ import tw from "tailwind-styled-components";
 import { useState } from "react";
 import RightContent from "./RightContent";
 import { motion } from "framer-motion";
-import {Languages_Tools} from"./data"
+import { Languages_Tools } from "./data";
 import { Languages_header } from "./LanguagesHeader";
 export default function SkillsSection() {
   const [selectedLang, setSelectedLang] = useState("");
@@ -19,7 +19,7 @@ export default function SkillsSection() {
             handleMouseEner={handleMouseEner}
             lang={lang}
             i={i}
-            key={i}
+            key={"lang" + i}
           ></LeftSection>
         ))}
       </div>
@@ -57,7 +57,6 @@ gap-y-4
 // ------------------
 
 const Logo = tw.div`
-cursor-pointer 
 logo-wrapper 
 relative 
 overflow-hidden
@@ -86,4 +85,3 @@ const Logo_wrapper_variants = {
   }),
   viewport: { once: true },
 };
-
