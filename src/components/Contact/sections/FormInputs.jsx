@@ -51,7 +51,7 @@ export default function FormInputs({formik }) {
       <FormControl {...formAnimation} custom={2} as={motion.div}>
         <FormLabel className="cursor-none" htmlFor="message">Your message</FormLabel>
         <motion.textarea
-          className={`max-sm:p-2 ${
+          className={`max-sm:p-2 resize-none ${
             errors.message && touched.message && "invalid-input"
           }`}
           onChange={handleChange}
