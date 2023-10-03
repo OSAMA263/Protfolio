@@ -24,7 +24,7 @@ export default function SmNavbar({ navLinks }) {
   return (
     <>
       <div
-        className="fixed top-0 z-[969]"
+        className="fixed top-0 right-0 z-[969] m-2"
       >
         <Button $active={isOpen} aria-label="menu" onClick={handel_toggle}>
           <Line className="first"></Line>
@@ -53,8 +53,13 @@ const Line = tw.span`
 transition-all
 bg-gray-400 
 w-full 
-h-[2px]
+h-[3px]
+absolute
+block
+top-1/2
 mx-auto
+rounded-md
+-translate-y-1/2
 duration-700
 `;
 
@@ -74,17 +79,13 @@ decoration-[#0aff9d]
 const Button = tw.button`
 ${({ $active }) => $active ? "active gap-y-0":"gap-y-2"}
 lg:hidden
-left-0
-top-0
-backdrop-blur-sm 
-flex
-flex-col
+backdrop-blur-xl
 h-8
-overflow-hidden
 transition-all
-m-4
-justify-center
-w-[150%]
+m-2
+w-9
+bg-[#17171738]
+overflow-hidden
 duration-700
 relative
 `;

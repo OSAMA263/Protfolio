@@ -1,7 +1,7 @@
 import { Spinner } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export default function Pictures(props) {
+export default function zPictures(props) {
   const { ele, projectInd, i, projectPics } = props;
 
   return (
@@ -11,7 +11,7 @@ export default function Pictures(props) {
         srcSet={projectPics[projectInd].mobile[i]}
       />
       <LazyLoadImage
-        className="sm:object-cover object-contain w-full max-h-[70vh]"
+        className="object-center w-full max-h-[70vh]"
         alt={ele.pc[i]}
         src={projectPics[projectInd].pc[i]}
         placeholder={

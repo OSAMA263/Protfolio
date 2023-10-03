@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  cursor: none;
   margin: 0;
+  cursor: url("../public/cursor.jpg"),auto!important;
   padding: 0;
   width: 100dvw;
   font-family: "Courier", monospace;
@@ -30,12 +30,11 @@ a,
 input,
 textarea,
 button {
-  cursor: none;
+  cursor: url("../public/cursor.jpg"),auto!important;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
   max-width: 100%;
   height: 100%;
   transition: all 0.5s;
@@ -54,8 +53,8 @@ textarea {
   scroll-snap-stop: always;
   height: 100dvh;
 }
-.myself-wrapper:has(span:is(:hover)) h1 {
-  color: #838383;
+.who-wrapper:has(span:is(:hover)) h1 {
+  color: #eaeaea7c;
 }
 /* myskills left section*/
 .logo-wrapper::after {
@@ -149,15 +148,22 @@ a.active:has(> small:is(:hover)) + h1 {
   );
 }
 
-/* -------nav toggle btn------- */
+/* -------navbar toggle btn------- */
+.first {
+  transform: translateY(-12px);
+}
+.last {
+  transform: translateY(9px);
+}
 button.active > .mid {
   width: 0px;
+  opacity: 0;
 }
 button.active > .first {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 button.active > .last {
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 /* ------contact me----- */
 textarea,

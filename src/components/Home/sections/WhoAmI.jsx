@@ -1,41 +1,79 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
+import { AiOutlineDownload } from "react-icons/ai";
+import PDF from "../../../../public/Osama-Khaled.pdf"
 
 export default function WhoAmI() {
   return (
     <Section>
-      <h1 className="transition-all">Hi, my name is Osama.</h1>
-      <h1 className="transition-all">
+      <Line>
+        <span className="text-4xl md:text-6xl">Hi</span>, my name is Osama
+        Khaled.
+      </Line>
+      <Line>
         I'm a <Frontend>frontend</Frontend> developer
-      </h1>
+      </Line>
+      <a
+        href={PDF}
+        download="Osama-Khaled"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button>
+          Get Resume <AiOutlineDownload />
+        </Button>
+      </a>
     </Section>
   );
 }
 
+const Button = tw.button`
+border-[1px]
+border-[#4b5563]
+mt-4
+font-semibold
+hover:bg-[#0aff9d]
+hover:shadow-[0px_0px_30px_2px_#0aff9d]
+hover:text-black
+hover:border-transparent
+flex
+p-3
+rounded-full
+justify-center
+items-center 
+gap-x-1
+`;
+
 const Section = tw(motion.div)`
-text-lg
+max-[400px]:text-base
+md:text-lg
 text-balance
-space-y-2
+gap-y-4
+flex
+justify-center
+items-center
+flex-col
 absolute
 z-[52]
 top-1/2
 left-1/2
-transition-all
 -translate-y-1/2
 -translate-x-1/2
-bg-[radial-gradient(closest-side,#101010,#101010,#1010105f,transparent)]
 p-2
-myself-wrapper
-[&>.myself-wrapper:has(span:is(:hover))_h1]:text-black
+text-center
+who-wrapper
+`;
+const Line = tw.h1`
+transition-all
 `;
 
 const Frontend = tw.span`
-text-[#101010] 
-bg-[#09ff9d38]
-p-1
-font-semibold
+text-[#eaeaea7c] 
+bg-[#2f353e89]
+hover:bg-[#4c535e]
+hover:text-[#eaeaea]
+hover:font-semibold
 transition-all
-hover:bg-[#0aff9d]
-hover:shadow-[0px_0px_10px_3px_#0aff9d]
+p-1
 `;

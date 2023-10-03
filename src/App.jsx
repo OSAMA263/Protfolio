@@ -6,6 +6,9 @@ import Contact from "./components/Contact/Contact";
 import Skills from "./components/Skills/Skills";
 import { ChakraProvider } from "@chakra-ui/react";
 import AppWrapper from "./Global-Comps/AppWrapper";
+import { theme } from '@chakra-ui/react'
+
+delete theme.styles.global;
 
 function App() {
   return (

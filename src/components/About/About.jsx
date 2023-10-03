@@ -15,7 +15,10 @@ export default function About() {
           <Text>
             <SectionHeader>About Me</SectionHeader>
             {text.map((line, line_i) => (
-              <div className="w-fit 2xl:leading-relaxed xl:leading-normal lg:leading-tight" key={line_i}>
+              <div
+                className="w-fit 2xl:leading-relaxed xl:leading-normal lg:leading-tight"
+                key={line_i}
+              >
                 {line
                   .replaceAll("-", `${"\u00A0"}`)
                   .split(" ")
@@ -23,7 +26,7 @@ export default function About() {
                     <p className="inline-block" key={word_i}>
                       {word.split("").map((letter, i) => (
                         <LetterReveal
-                          opaDelay={0.010}
+                          opaDelay={0.01}
                           opaSpeed={0.06}
                           opaWaitTime={3}
                           letter_i={letter_i++}
@@ -39,7 +42,11 @@ export default function About() {
           </Text>
           {/* ------------ */}
           <ImgWrapper>
-            <img src="bg.gif" loading="lazy" className="object-cover w-full" alt="about-img" />
+            <img
+              src="about-img.avif"
+              className="object-cover w-full"
+              alt="about-img"
+            />
           </ImgWrapper>
         </Wrapper>
       </ContentWrapper>
@@ -54,7 +61,7 @@ xl:gap-x-10
 gap-x-2
 lg:grid-cols-2
 lg:gap-y-0
-gap-y-0
+gap-y-6
 max-[375px]:!grid-rows-1
 `;
 
@@ -62,6 +69,7 @@ const Text = tw(motion.div)`
 flex
 flex-col   
 lg:-tracking-wide
+max-[380px]:space-y-2
 justify-between
 `;
 
@@ -75,11 +83,8 @@ max-[375px]:hidden
 
 const text = [
   "Hello - again!",
-  "As - a - frontend - developer, - ReactJS - is - a - tool - I - frequently - utilize - in - my - work,",
-  "aside - from - some - libraries - and - packages - like - Tailwind, - Framer - Motion, - and - others.",
-  "I - graduated - from - Delta - Academy - of - Science - with - a - bachelor's - degree",
-  "in - information - systems.",
-  "I - enjoy - finding - bugs - and - staying - up - all - night - to - fix - them - it's - so - much - fun...yep.",
-  "I'm - trying - to - find - a - job - where - I - can - be - trusted, - learn - more, - enhance - my - skills,",
-  "and - gain - guidance - from - more - experienced - employees.",
+  "As - a - frontend - developer, - ReactJS - is - a - tool - I - frequently - utilize - in - my - work, aside - from - some - libraries - and - packages - like - Tailwind, - Framer - Motion, - and - others.",
+  "I - graduated - from - Delta - Academy - of - Science - with - a - bachelor's - degree - in - information - systems.",
+  "I - enjoy - finding - bugs - and - stay - up - all - night - to - fix - them - it's - so - much - fun...yep.",
+  "I'm - trying - to - find - a - job - where - I - can - be - trusted, - learn - more, - enhance - my - skills, and - gain - guidance - from - more - experienced - employees.",
 ];

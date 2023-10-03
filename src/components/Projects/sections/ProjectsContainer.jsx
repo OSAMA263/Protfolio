@@ -3,6 +3,7 @@ import { useState } from "react";
 import { PiEyeClosedLight } from "react-icons/pi";
 import { LiaEyeSolid } from "react-icons/lia";
 import Modal from "./modal/Modal";
+import { motion } from "framer-motion";
 
 export default function ProjectsContainer() {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -22,8 +23,18 @@ export default function ProjectsContainer() {
             onClick={() => handle_project_click(i)}
             key={i}
           >
+            <Curtain>
+              {[1, 2, 3, 4].map((col) => (
+                <motion.div
+                  {...CurtainColsAnimation}
+                  custom={col}
+                  className="bg-[#3f4247] w-full"
+                  key={col}
+                ></motion.div>
+              ))}
+            </Curtain>
             {/* pictures */}
-            <picture className="object-cover w-full">
+            <picture className="w-full">
               <source
                 media="(max-width:645px )"
                 srcSet={`projects/mobile/thumbnail/project${i}.webp`}
@@ -53,7 +64,23 @@ export default function ProjectsContainer() {
   );
 }
 // ---------------
+const CurtainColsAnimation = {
+  initial: { y: "0%" },
+  animate: (i) => ({
+    y: "100%",
+    transition: { delay: i * 0.2 + 3.8, duration: 0.6 },
+    viewport: { once: true },
+  }),
+};
 
+const Curtain = tw.div`
+grid
+grid-cols-4
+w-full 
+z-[69] 
+absolute 
+h-full
+`;
 const Wrapper = tw.div`
 h-[60vh]
 xl:w-[80%]

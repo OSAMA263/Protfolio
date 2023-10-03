@@ -23,18 +23,19 @@ export default function Modal(props) {
     <>
       <AlertDialog isCentered closeOnEsc closeOnOverlayClick isOpen={isOpen}>
         <AlertDialogOverlay>
-          <AlertDialogContent maxW={1200} className={ModalContentStyles}>
+          <AlertDialogContent maxW={1200} className="!bg-transparent">
             {/* header */}
             <AlertDialogHeader className="mb-2 text-end">
               <button
                 className="[&>svg]:hover:text-gray-600"
                 onClick={handle_close_modal}
+                aria-label="close-modal"
               >
                 <MdCloseFullscreen className="text-3xl" />
               </button>
             </AlertDialogHeader>
             {/* body */}
-            <AlertDialogBody className="!h-full">
+            <AlertDialogBody>
               <Slider projectInd={projectInd} />
             </AlertDialogBody>
             {/* footer */}
@@ -60,8 +61,6 @@ export default function Modal(props) {
     </>
   );
 }
-
-const ModalContentStyles = `!bg-transparent transition-all duration-1000 !h-full`;
 
 const Links = tw.a`
 [&>svg]:hover:text-[#0aff9d] 

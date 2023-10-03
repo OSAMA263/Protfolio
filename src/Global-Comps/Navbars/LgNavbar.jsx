@@ -8,7 +8,7 @@ export default function LgNavbar({ navLinks, linksAnimation }) {
       <ul>
         {navLinks.map(({ link, label }, i) => (
           <Li {...linksAnimation} custom={i} key={i}>
-            <Link aria-label="Square-link" href={link} spy to={link}>
+            <Link aria-label="Square-link" className="p-[2px]" href={link} spy to={link}>
               <Square />
             </Link>
             <H1>

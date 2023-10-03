@@ -23,7 +23,7 @@ const LetterVarinats = {
     opacity: 0,
   }),
   whileHover: {
-    opacity: [0,0, 1],
+    opacity: [0, 1],
     transition: {
       duration: 0.4,
     },

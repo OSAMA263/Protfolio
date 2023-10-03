@@ -29,5 +29,6 @@ export default function Contact() {
 }
 
 const H2=tw.h2`
-text-lg
+mt-6
+text-center
 `

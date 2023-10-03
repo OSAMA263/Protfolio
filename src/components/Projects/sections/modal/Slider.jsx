@@ -5,15 +5,13 @@ import { projectPics } from "./data";
 
 export default function Slider({ projectInd }) {
   return (
-    <Swiper {...swiperProps} className="rounded-xl sm:!w-auto overflow-hidden ">
+    <Swiper
+      {...swiperProps}
+      className="rounded-xl sm:!w-auto overflow-hidden"
+    >
       {projectPics.map((ele, i) => (
         <SwiperSlide key={i} className="overflow-hidden rounded-xl">
-          <Pictures
-            projectPics={projectPics}
-            ele={ele}
-            projectInd={projectInd}
-            i={i}
-          ></Pictures>
+          <Pictures {...{ projectPics, ele, projectInd, i }}/>
         </SwiperSlide>
       ))}
     </Swiper>
@@ -21,7 +19,7 @@ export default function Slider({ projectInd }) {
 }
 
 const swiperProps = {
-  spaceBetween: 0,
+  spaceBetween: 10,
   slidesPerView: 1,
   breakpoints: {
     645: {
