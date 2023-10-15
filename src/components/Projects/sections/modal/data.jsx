@@ -58,3 +58,38 @@ export const projectPics = [
     ],
   },
 ];
+
+export const projectsDetails = [
+  {
+    name: "Your Apartment",
+    languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "SwiperJS"],
+    description:
+      "A website for an apartment rental service that shows a responsive design and carousel images slider, presenting information on rental properties and services in an attractive and informative manner.",
+    live: "https://osama263.github.io/Your-Apartment/",
+    github: "https://github.com/OSAMA263/Your-Apartment",
+  },
+  {
+    name: "Design",
+    languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
+    description:
+      "A sample website challenge (Frontend Mentor) that I implemented using Rotion, Tailwind CSS, and some CSS.",
+    live: "https://osama263.github.io/Design/",
+    github: "https://github.com/OSAMA263/Design",
+  },
+  {
+    name: "E-commerce",
+    languages: ["ReactJS", "Redux", "Bootstrap", "Sass"],
+    description:
+      "This website is an E-commerce application. It includes multi pages such as home, shop, product details, checkout, and cart built with ReactJS and Redux for building a functional and dynamic user interface.",
+    live: "https://osama263.github.io/ecommerce-app/",
+    github: "https://github.com/OSAMA263/ecommerce-app",
+  },
+  {
+    name: "Arch",
+    languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
+    description:
+      "A sample website that shows a portfolio of architectural projects, its multi page website and responsive design, built with ReactJS and Tailwind CSS.",
+    live: "https://osama263.github.io/Arch-/",
+    github: "https://github.com/OSAMA263/Arch-",
+  },
+];

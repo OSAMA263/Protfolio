@@ -40,7 +40,7 @@ const LeftSection = ({ lang, handleMouseEner, i }) => {
       <LogosRow {...Logo_wrapper_variants} custom={i}>
         {logos.map((logo, i) => (
           <Logo onClick={() => handleMouseEner(logo_name[i])} key={i}>
-            <img alt={logo} width={48} height={48} loading="lazy" src={logo} />
+            <img alt={logo} width={48}loading="lazy" height={48} src={logo} />
           </Logo>
         ))}
       </LogosRow>
@@ -49,9 +49,11 @@ const LeftSection = ({ lang, handleMouseEner, i }) => {
 };
 const LogosRow = tw(motion.div)`
 flex 
-gap-x-4
 flex-wrap
-gap-y-4
+md:gap-x-4
+md:gap-y-4
+gap-x-1
+gap-y-1
 `;
 
 // ------------------
@@ -60,11 +62,13 @@ const Logo = tw.div`
 logo-wrapper 
 relative 
 overflow-hidden
-hover:scale-110
+[&>img]:hover:scale-[1.3]
 transition-all
 duration-500
-sm:[&>img]:w-auto
-[&>img]:w-[80%]
+[&>img]:p-2
+border
+border-gray-700
+rounded-2xl
 `;
 
 const Wrapper = tw.div`

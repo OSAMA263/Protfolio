@@ -68,7 +68,7 @@ max-[375px]:!grid-rows-1
 const Text = tw(motion.div)`
 flex
 flex-col   
-lg:-tracking-wide
+lg:tracking-wide
 max-[380px]:space-y-2
 justify-between
 `;
@@ -83,7 +83,7 @@ max-[375px]:hidden
 
 const text = [
   "Hello - again!",
-  "As - a - frontend - developer, - ReactJS - is - a - tool - I - frequently - utilize - in - my - work, aside - from - some - libraries - and - packages - like - Tailwind, - Framer - Motion, - and - others.",
+  "As - a - frontend - developer, - ReactJS - is - a - tool - I - frequently - utilize - in - my - work, - aside - from - some - libraries - and - packages - like - Tailwind, - Framer - Motion, - and - others.",
   "I - graduated - from - Delta - Academy - of - Science - with - a - bachelor's - degree - in - information - systems.",
   "I - enjoy - finding - bugs - and - stay - up - all - night - to - fix - them - it's - so - much - fun...yep.",
   "I'm - trying - to - find - a - job - where - I - can - be - trusted, - learn - more, - enhance - my - skills, and - gain - guidance - from - more - experienced - employees.",

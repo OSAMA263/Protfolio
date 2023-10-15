@@ -9,7 +9,7 @@ export default function Contact() {
     <PageWrapper id="contact">
       <ContentWrapper>
         <SectionHeader>
-          <p className="text-sm">Get In Touch</p> Contact Me
+          <p className="text-sm">Get In Touch</p> Contact With Me
         </SectionHeader>
         <FormWrapper></FormWrapper>
       </ContentWrapper>

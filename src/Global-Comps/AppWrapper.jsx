@@ -3,7 +3,7 @@ import { useRef } from "react";
 import tw from "tailwind-styled-components";
 
 export default function AppWrapper({ children }) {
-  const smDevices = window.matchMedia("(max-width:420px)");
+  const smDevices = window.matchMedia("(max-width:640px)");
   const circleRef = useRef(null);
   // const smspring = { stiffness: 280, damping: 10, mass: 0.1 };
   const lgspring = { stiffness: 85, damping: 15, mass: 0.1 };
@@ -12,7 +12,7 @@ export default function AppWrapper({ children }) {
 
   const handle_mouse_move = (e) => {
     const { clientX, clientY } = e;
-    const { width, height,} = circleRef.current.getBoundingClientRect();
+    const { width, height} = circleRef.current.getBoundingClientRect();
 
     const moveX = clientX - (width / 3);
     const moveY = clientY - (height / 3);

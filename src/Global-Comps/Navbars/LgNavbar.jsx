@@ -26,6 +26,7 @@ const Li = tw(motion.li)`
 overflow-hidden
 p-2
 flex
+font-bold
 relative
 items-center
 `;

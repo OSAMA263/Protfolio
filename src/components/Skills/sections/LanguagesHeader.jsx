@@ -6,7 +6,7 @@ export const Languages_header = ({ line }) => {
     .split(" ")
     .map((word, word_i) => (
       <p
-        className="inline-block text-lg font-semibold -tracking-tight"
+        className="inline-block text-lg font-semibold"
         key={word_i}
       >
         {word.split("").map((letter, letter_i) => (
