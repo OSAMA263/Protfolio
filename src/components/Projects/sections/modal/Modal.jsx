@@ -14,14 +14,14 @@ import { projectsDetails } from "./data";
 
 export default function Modal(props) {
   const { projectInd, openModal, setOpenModal } = props;
-
+console.log(projectInd, openModal, setOpenModal);
   const handle_close_modal = () => {
     setOpenModal(false);
   };
 
   return (
     <>
-      <AlertDialog isCentered openModal={openModal}>
+      <AlertDialog isCentered isOpen={openModal}>
         <AlertDialogOverlay bg="blackAlpha.800">
           <AlertDialogContent maxW={1200} className="!bg-transparent">
             {/* header */}
