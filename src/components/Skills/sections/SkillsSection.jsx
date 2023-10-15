@@ -10,7 +10,7 @@ export default function SkillsSection() {
   const handleMouseEner = (logo) => {
     setSelectedLang(logo);
   };
-
+// prevent the re render here and in the contact compoenent
   return (
     <Wrapper>
       <div className="space-y-4 lg:space-y-8 ">
@@ -47,6 +47,18 @@ const LeftSection = ({ lang, handleMouseEner, i }) => {
     </motion.div>
   );
 };
+
+const Logo_wrapper_variants = {
+  initial: {
+    opacity: 0,
+  },
+  whileInView: (i) => ({
+    opacity: 1,
+    transition: { duration: 0.4, delay: 2 * i + 3.3 },
+  }),
+  viewport: { once: true },
+};
+
 const LogosRow = tw(motion.div)`
 flex 
 flex-wrap
@@ -55,8 +67,6 @@ md:gap-y-4
 gap-x-1
 gap-y-1
 `;
-
-// ------------------
 
 const Logo = tw.div`
 logo-wrapper 
@@ -79,13 +89,3 @@ gap-y-10
 gap-x-2
 `;
 
-const Logo_wrapper_variants = {
-  initial: {
-    opacity: 0,
-  },
-  whileInView: (i) => ({
-    opacity: 1,
-    transition: { duration: 0.4, delay: 2 * i + 3.3 },
-  }),
-  viewport: { once: true },
-};

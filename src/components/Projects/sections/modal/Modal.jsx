@@ -14,7 +14,7 @@ import { projectsDetails } from "./data";
 
 export default function Modal(props) {
   const { projectInd, openModal, setOpenModal } = props;
-console.log(projectInd, openModal, setOpenModal);
+
   const handle_close_modal = () => {
     setOpenModal(false);
   };

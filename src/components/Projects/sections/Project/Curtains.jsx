@@ -1,8 +1,7 @@
 import tw from "tailwind-styled-components";
 import { motion } from "framer-motion";
-import { memo } from "react";
 
-const Curtains = memo(() => {
+const Curtains = () => {
   return (
     <Wrapper>
       {[1, 2, 3, 4].map((col) => (
@@ -15,7 +14,7 @@ const Curtains = memo(() => {
       ))}
     </Wrapper>
   );
-});
+};
 
 export default Curtains;
 
@@ -24,7 +23,6 @@ const CurtainColsAnimation = {
   animate: (i) => ({
     y: "100%",
     transition: { delay: i * 0.2 + 3.9, duration: 0.6 },
-    viewport: { once: true },
   }),
 };
 

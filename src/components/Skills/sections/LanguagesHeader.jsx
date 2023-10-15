@@ -5,10 +5,7 @@ export const Languages_header = ({ line }) => {
     .replaceAll("-", `${"\u00A0"}`)
     .split(" ")
     .map((word, word_i) => (
-      <p
-        className="inline-block text-lg font-semibold"
-        key={word_i}
-      >
+      <p className="inline-block text-lg font-semibold" key={word_i}>
         {word.split("").map((letter, letter_i) => (
           <LetterReveal
             Y={30}

@@ -1,5 +1,4 @@
 import tw from "tailwind-styled-components";
-import { memo, useState } from "react";
 import { PiEyeClosedLight } from "react-icons/pi";
 import { LiaEyeSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
@@ -7,18 +6,14 @@ import Curtains from "./Curtains";
 
 const Project = (props) => {
   const { handleProjectClick } = props;
-  const [openEye, setOpenEye] = useState(null);
-
-  const handleOpenEye = (i) => {
-    setOpenEye(i);
-  };
 
   return (
     <>
       {projectsPlace.map((pro, i) => (
         <Card
-          onMouseEnter={() => handleOpenEye(i)}
-          onMouseLeave={() => setOpenEye(null)}
+          initial="initial"
+          whileHover="whileHover"
+          animate="animate"
           onClick={() => handleProjectClick(i)}
           style={{ gridArea: pro.place }}
           key={i}
@@ -27,28 +22,27 @@ const Project = (props) => {
           {/* thumb nails */}
           <ThumbNail i={i}></ThumbNail>
           {/* eyes icons */}
-          <EyesWrapper>
-            {["open", "close"].map((eye) => (
-              <Eye
-                key={eye}
-                {...eyesAnimation({
-                  i,
-                  openEye,
-                  active: Eyes[eye].active,
-                  inActive: Eyes[eye].inActive,
-                })}
-              >
-                {Eyes[eye].icon}
-              </Eye>
-            ))}
-          </EyesWrapper>
+          <Eyes></Eyes>
         </Card>
       ))}
     </>
   );
 };
 
-const ThumbNail = memo(({ i }) => {
+const Eyes = () => {
+  return (
+    <EyesWrapper>
+      <Eye variants={closeEyeVariants}>
+        <PiEyeClosedLight />
+      </Eye>
+      <Eye variants={openEyeVariants}>
+        <LiaEyeSolid />
+      </Eye>
+    </EyesWrapper>
+  );
+};
+
+const ThumbNail = ({ i }) => {
   return (
     <picture className="w-full">
       <source
@@ -63,22 +57,32 @@ const ThumbNail = memo(({ i }) => {
       />
     </picture>
   );
-});
+};
 
-const eyesAnimation = (props) => {
-  const { openEye, i, active, inActive } = props;
-
-  const animation = {
-    animate: {
-      opacity: openEye === i ? active : inActive,
-    },
+const openEyeVariants = {
+  initial: { opacity: [0.5, 0] },
+  animate: { opacity: 0 },
+  whileHover: {
+    opacity: [0, 0, 0.5, 1],
     transition: {
-      repeat: openEye === i && Infinity,
-      repeatDelay: 1.8,
+      repeat: Infinity,
+      repeatDelay: 1.1,
       duration: 0.5,
     },
-  };
-  return animation;
+  },
+};
+
+const closeEyeVariants = {
+  initial: { opacity: [0.5, 1] },
+  animate: { opacity: 1 },
+  whileHover: {
+    opacity: [1, 1, 0.5, 0],
+    transition: {
+      repeat: Infinity,
+      repeatDelay: 1.1,
+      duration: 0.5,
+    },
+  },
 };
 
 const projectsPlace = [
@@ -88,20 +92,7 @@ const projectsPlace = [
   { place: "3/3/7/7" },
 ];
 
-const Eyes = {
-  open: {
-    active: [0, 0, 0.5, 1],
-    inActive: [0.5, 0],
-    icon: <LiaEyeSolid />,
-  },
-  close: {
-    active: [1, 1, 0.5, 0],
-    inActive: [0.5, 1],
-    icon: <PiEyeClosedLight />,
-  },
-};
-
-const Card = tw.div`
+const Card = tw(motion.div)`
 flex
 relative
 overflow-hidden
