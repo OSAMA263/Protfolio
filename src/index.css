@@ -53,7 +53,7 @@ textarea {
   scroll-snap-stop: always;
   height: 100dvh;
 }
-.who-wrapper:has(span:is(:hover)) h1 {
+.who-wrapper:has(h1>span:is(:hover)) h1 {
   color: #eaeaea7c;
 }
 /* myskills left section*/
