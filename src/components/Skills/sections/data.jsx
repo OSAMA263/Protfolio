@@ -17,7 +17,7 @@ export const Languages_Tools = [
       "logo/redux.svg",
       "logo/chakra-ui.svg",
       "logo/tailwindcss.svg",
-      "logo/framer-motion.png",
+      "logo/framer-motion.svg",
       "logo/styled-components.png",
       "logo/bootstrap.svg",
     ],
