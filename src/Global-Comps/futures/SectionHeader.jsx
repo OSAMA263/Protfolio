@@ -16,7 +16,8 @@ const H1Variants = {
 };
 
 const H1 = tw(motion.h1)`
-text-2xl 
+text-2xl
+max-[350px]:text-lg
 mb-5
 font-[900]
 `;

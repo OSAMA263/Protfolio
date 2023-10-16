@@ -59,7 +59,7 @@ h-12
 top-0
 left-0
 bg-black
-bg-opacity-30
+bg-opacity-20
 pointer-events-none
 z-[6666666666666666666666669]
 `;

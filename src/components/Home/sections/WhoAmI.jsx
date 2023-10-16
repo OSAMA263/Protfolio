@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 import { AiOutlineDownload } from "react-icons/ai";
 import PDF from "../../../../public/Osama-Khaled.pdf";
-import HeartBeatAnimation from "../../../Global-Comps/futures/HeartBeatAnimation";
 
 export default function WhoAmI() {
   return (
@@ -22,11 +21,9 @@ export default function WhoAmI() {
         target="_blank"
         rel="noreferrer"
       >
-        <HeartBeatAnimation animation={HeartBeat}>
-          <Button>
-            Get Resume <AiOutlineDownload />
-          </Button>
-        </HeartBeatAnimation>
+        <Button {...HeartBeat}>
+          Get Resume <AiOutlineDownload />
+        </Button>
       </a>
     </Section>
   );
@@ -42,7 +39,7 @@ const HeartBeat = {
       "0px 0px 15px 0.1px #0aff9d",
     ],
   },
-  transition: { duration: 0.2, repeat: Infinity, repeatDelay: .9 },
+  transition: { duration: 0.2, repeat: Infinity, repeatDelay: 0.9 },
 };
 
 const Button = tw(motion.button)`
@@ -61,8 +58,9 @@ gap-x-1
 `;
 
 const Section = tw(motion.div)`
-max-[400px]:text-base
+max-[350px]:text-base
 md:text-lg
+!text-sm
 text-balance
 gap-y-4
 flex

@@ -45,7 +45,7 @@ const ModalHeader = ({ handle_close_modal, i }) => {
   return (
     <AlertDialogHeader className="flex justify-between mb-2">
       {/* project links */}
-      <div className="flex items-end justify-center">
+      <div className="flex flex-wrap items-end justify-center">
         <h1 className="text-lg sm:text-2xl">
           {projectsDetails[i].name}
           {i == 2 && (
@@ -53,12 +53,12 @@ const ModalHeader = ({ handle_close_modal, i }) => {
           )}
           __{"\u00A0"}
         </h1>
-        <Links href={projectsDetails[i].github} target="_blank">
+    <div className="flex">    <Links href={projectsDetails[i].github} target="_blank">
           <RxGithubLogo />
         </Links>
         <Links href={projectsDetails[i].live} target="_blank">
           <RxExternalLink />
-        </Links>
+        </Links></div>
       </div>
       {/* CLOSE MODAL BUTTON */}
       <button

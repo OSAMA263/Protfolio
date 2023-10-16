@@ -63,6 +63,8 @@ w-[90%]
 mx-auto 
 sm:space-y-6
 space-y-3
+max-[350px]:!text-xs
+text-lg
 [&>div>label]:text-[#bdbdbd]
 overflow-hidden
 `;

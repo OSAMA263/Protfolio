@@ -32,15 +32,15 @@ const LeftSection = ({ lang, handleMouseEner, i }) => {
   const { p, logos, logo_name } = lang;
 
   return (
-    <motion.div className="flex flex-col gap-y-3">
-      <div className="flex w-full py-2 overflow-hidden tracking-widest">
+    <motion.div className="flex flex-col text-xs gap-y-3">
+      <div className="flex flex-wrap w-full py-2 overflow-hidden tracking-widest">
         <Languages_header line={p}></Languages_header>
       </div>
       {/* loggo */}
       <LogosRow {...Logo_wrapper_variants} custom={i}>
         {logos.map((logo, i) => (
           <Logo onClick={() => handleMouseEner(logo_name[i])} key={i}>
-            <img alt={logo} width={48}loading="lazy" height={48} src={logo} />
+            <img alt={logo} loading="lazy" src={logo} />
           </Logo>
         ))}
       </LogosRow>
@@ -76,6 +76,8 @@ overflow-hidden
 transition-all
 duration-500
 [&>img]:p-2
+sm:[&>img]:w-[48px]
+[&>img]:w-[40px]
 border
 border-gray-700
 rounded-2xl

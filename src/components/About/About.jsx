@@ -63,6 +63,7 @@ lg:grid-cols-2
 lg:gap-y-0
 gap-y-6
 max-[375px]:!grid-rows-1
+max-[350px]:text-sm
 `;
 
 const Text = tw(motion.div)`
