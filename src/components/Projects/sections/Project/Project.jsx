@@ -3,35 +3,56 @@ import { PiEyeClosedLight } from "react-icons/pi";
 import { LiaEyeSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Curtains from "./Curtains";
+import { memo } from "react";
 
 const Project = (props) => {
-  const { handleProjectClick } = props;
+  const { handleProjectClick, slide } = props;
+
+  const handleClick = (completed, slide, i) => {
+    completed && handleProjectClick(slide[i]);
+    console.log();
+  };
 
   return (
     <>
-      {projectsPlace.map((pro, i) => (
-        <Card
+      {slide.map(({ completed, thumbnail }, i) => (
+        <GridCell
           initial="initial"
           whileHover="whileHover"
           animate="animate"
-          onClick={() => handleProjectClick(i)}
-          style={{ gridArea: pro.place }}
+          onClick={() => handleClick(completed, slide, i)}
+          style={{ gridArea: projectsPlace[i] }}
           key={i}
         >
           <Curtains></Curtains>
           {/* thumb nails */}
-          <ThumbNail i={i}></ThumbNail>
+          <ThumbNail thumbnail={thumbnail}></ThumbNail>
           {/* eyes icons */}
-          <Eyes></Eyes>
-        </Card>
+          <Eyes completed={completed}></Eyes>
+        </GridCell>
       ))}
     </>
   );
 };
+const projectsPlace = ["1/1/-1/2", "1/2/3/3", "3/2/-1/-1"];
 
-const Eyes = () => {
+const ThumbNail = memo(({ thumbnail }) => {
   return (
-    <EyesWrapper>
+    <picture className="w-full">
+      <source media="(max-width:645px )" srcSet={thumbnail.mobile} />
+      <img
+        loading="lazy"
+        className="object-cover w-full"
+        alt={thumbnail.pc}
+        src={thumbnail.pc}
+      />
+    </picture>
+  );
+});
+
+const Eyes = memo(({ completed }) => {
+  return (
+    <EyesWrapper $isReady={completed}>
       <Eye variants={closeEyeVariants}>
         <PiEyeClosedLight />
       </Eye>
@@ -40,24 +61,7 @@ const Eyes = () => {
       </Eye>
     </EyesWrapper>
   );
-};
-
-const ThumbNail = ({ i }) => {
-  return (
-    <picture className="w-full">
-      <source
-        media="(max-width:645px )"
-        srcSet={`projects/mobile/thumbnail/project${i}.webp`}
-      />
-      <img
-        loading="lazy"
-        className="object-cover w-full"
-        alt={`project` + i}
-        src={`projects/pc/thumbnail/project${i}.webp`}
-      />
-    </picture>
-  );
-};
+});
 
 const openEyeVariants = {
   initial: { opacity: [0.5, 0] },
@@ -85,14 +89,7 @@ const closeEyeVariants = {
   },
 };
 
-const projectsPlace = [
-  { place: "1/1/5/3" },
-  { place: "1/3/3/7" },
-  { place: "5/1/7/3" },
-  { place: "3/3/7/7" },
-];
-
-const Card = tw(motion.div)`
+const GridCell = tw(motion.div)`
 flex
 relative
 overflow-hidden
@@ -106,10 +103,10 @@ rounded-xl
 `;
 
 const EyesWrapper = tw.div`
+${({ $isReady }) => (!$isReady ? "hidden" : "flex")}
 eyes-wrapper
 absolute 
 w-full 
-flex
 justify-center 
 py-4 items-center 
 top-1/2 

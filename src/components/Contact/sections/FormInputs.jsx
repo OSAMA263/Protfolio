@@ -8,7 +8,7 @@ export default function FormInputs({ formik }) {
   return (
     <>
       <FormControl {...formAnimation} custom={0} as={motion.div}>
-        <FormLabel className="!cursor-none" htmlFor="name">
+        <FormLabel htmlFor="name">
           Name
         </FormLabel>
         <input
@@ -30,7 +30,7 @@ export default function FormInputs({ formik }) {
       </FormControl>
 
       <FormControl {...formAnimation} custom={1} as={motion.div}>
-        <FormLabel className="!cursor-none"  htmlFor="email">
+        <FormLabel  htmlFor="email">
           Email
         </FormLabel>
         <input
@@ -52,7 +52,7 @@ export default function FormInputs({ formik }) {
       </FormControl>
 
       <FormControl {...formAnimation} custom={2} as={motion.div}>
-        <FormLabel className="!cursor-none"  htmlFor="message">
+        <FormLabel  htmlFor="message">
           Your message
         </FormLabel>
         <motion.textarea

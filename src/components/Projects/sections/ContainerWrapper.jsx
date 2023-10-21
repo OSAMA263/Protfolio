@@ -16,7 +16,7 @@ const wrapper_variants = {
   viewport: { once: true },
 };
 
-const Wrapper = tw(motion.div)` 
+const Wrapper = tw(motion.div)`
 flex
 justify-center
 `;

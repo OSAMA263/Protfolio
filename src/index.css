@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  cursor: url("../public/cursor.jpg"), auto !important;
+}
 body {
   margin: 0;
   padding: 0;
-  cursor: url("../public/cursor.jpg"),auto!important;
   width: 100dvw;
   font-family: "Courier", monospace;
   -webkit-font-smoothing: none;
@@ -31,7 +33,7 @@ a,
 input,
 textarea,
 button {
-  cursor: url("../public/cursor.jpg"),auto!important;
+  cursor: url("../public/cursor.jpg"), auto !important;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -54,7 +56,7 @@ textarea {
   scroll-snap-stop: always;
   height: 100dvh;
 }
-.who-wrapper:has(h1>span:is(:hover)) h1 {
+.who-wrapper:has(h1 > span:is(:hover)) h1 {
   color: #eaeaea7c;
 }
 /* myskills left section*/

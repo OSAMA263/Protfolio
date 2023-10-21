@@ -10,12 +10,12 @@ import { MdCloseFullscreen } from "react-icons/md";
 import { RxExternalLink, RxGithubLogo } from "react-icons/rx";
 import tw from "tailwind-styled-components";
 import Slider from "./Slider";
-import { projectsDetails } from "./data";
 
 export default function Modal(props) {
-  const { projectInd, openModal, setOpenModal } = props;
+  const { openModal, setOpenModal } = props;
+  const { modal, sliderImages } = props.selectedProject;
 
-  const handle_close_modal = () => {
+  const handleCloseModal = () => {
     setOpenModal(false);
   };
 
@@ -23,17 +23,15 @@ export default function Modal(props) {
     <>
       <AlertDialog isCentered isOpen={openModal}>
         <AlertDialogOverlay bg="blackAlpha.800">
-          <AlertDialogContent maxW={1200} className="!bg-transparent">
+          <AlertDialogContent maxW={900} className="!bg-transparent">
             {/* header */}
-            <ModalHeader
-              {...{ handle_close_modal, i: projectInd }}
-            ></ModalHeader>
+            <ModalHeader {...{ handleCloseModal, modal }}></ModalHeader>
             {/* body */}
             <AlertDialogBody>
-              <Slider projectInd={projectInd} />
+              <Slider sliderImages={sliderImages} />
             </AlertDialogBody>
             {/* footer */}
-            <ModalFooter i={projectInd}></ModalFooter>
+            <ModalFooter modal={modal}></ModalFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
@@ -41,29 +39,31 @@ export default function Modal(props) {
   );
 }
 // ---------------
-const ModalHeader = ({ handle_close_modal, i }) => {
+const ModalHeader = ({ handleCloseModal, modal }) => {
   return (
     <AlertDialogHeader className="flex justify-between mb-2">
       {/* project links */}
       <div className="flex flex-wrap items-end justify-center">
         <h1 className="text-lg sm:text-2xl">
-          {projectsDetails[i].name}
-          {i == 2 && (
+          {modal.name}
+          {modal.name === "E-commerce" && (
             <span className="hidden text-sm sm:inline">(my first project)</span>
           )}
           __{"\u00A0"}
         </h1>
-    <div className="flex">    <Links href={projectsDetails[i].github} target="_blank">
-          <RxGithubLogo />
-        </Links>
-        <Links href={projectsDetails[i].live} target="_blank">
-          <RxExternalLink />
-        </Links></div>
+        <div className="flex">
+          <Links href={modal.github} target="_blank">
+            <RxGithubLogo />
+          </Links>
+          <Links href={modal.live} target="_blank">
+            <RxExternalLink />
+          </Links>
+        </div>
       </div>
       {/* CLOSE MODAL BUTTON */}
       <button
         className="[&>svg]:hover:text-gray-600"
-        onClick={handle_close_modal}
+        onClick={handleCloseModal}
         aria-label="close-modal"
       >
         <MdCloseFullscreen className="text-2xl md:text-3xl" />
@@ -71,21 +71,15 @@ const ModalHeader = ({ handle_close_modal, i }) => {
     </AlertDialogHeader>
   );
 };
-const Links = tw.a`
-[&>svg]:hover:text-[#0aff9d] 
-md:[&>svg]:text-3xl
-[&>svg]:text-2xl
-me-3
-mt-2
-`;
+
 // ---------------
-const ModalFooter = ({ i }) => {
+const ModalFooter = ({ modal }) => {
   return (
     <AlertDialogFooter className="!justify-start gap-y-2 flex-col">
       <>
-        <h1 className="text-gray-300">{projectsDetails[i].description}</h1>
+        <h1 className="text-gray-300">{modal.description}</h1>
         <div className="flex flex-wrap justify-center gap-1">
-          {projectsDetails[i].languages.map((lang, ind) => (
+          {modal.languages.map((lang, ind) => (
             <Lang key={"lang" + ind}>{lang}</Lang>
           ))}
         </div>
@@ -100,4 +94,12 @@ bg-gray-200
 text-black
 font-extrabold
 p-1
+`;
+
+const Links = tw.a`
+[&>svg]:hover:text-[#0aff9d] 
+md:[&>svg]:text-3xl
+[&>svg]:text-2xl
+me-3
+mt-2
 `;
