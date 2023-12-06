@@ -2,14 +2,13 @@
 import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 import { AiOutlineDownload } from "react-icons/ai";
-import PDF from "../../../../public/Osama-Khaled.pdf";
-
+import PDF from "../../../../public/Resume.pdf";
 export default function WhoAmI() {
   return (
     <Section>
       <Line>
         <small className="text-4xl font-bold md:text-6xl">Hi</small>
-        <p className="underline underline-offset-4 ">I'm Osama Khaled</p>
+        <p className="underline underline-offset-4">I'm Osama Khaled</p>
       </Line>
       <Line>
         a <Frontend>react-js</Frontend> developer.
