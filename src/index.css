@@ -57,7 +57,7 @@ textarea {
   height: 100dvh;
 }
 .who-wrapper:has(h1 > span:is(:hover)) h1 {
-  color: #eaeaea7c;
+  color: #eaeaea0e;
 }
 /* myskills left section*/
 .logo-wrapper::after {
