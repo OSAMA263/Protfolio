@@ -30,6 +30,37 @@ export const ProjectsInfo = [
       },
     },
 
+    
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/E-store.webp",
+        mobile: "projects/mobile/thumbnail/E-store.webp",
+      },
+      modal: {
+        name: "E-store",
+        languages: ["ReactJS", "Redux", "Tailwind", "Css", "Chakra-UI"],
+        description:
+          "Utilized React to build scalable, efficient, and reusable UI components for a web application ,and Used Chakra UI to create responsive, accessible, and performant user interfaces,Utilized Redux to store the user cart and wishlist products",
+        live: "https://osama263.github.io/store/",
+        github: "https://github.com/OSAMA263/store",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/E-store/pic0.webp",
+          "projects/pc/slider/E-store/pic1.webp",
+          "projects/pc/slider/E-store/pic2.webp",
+          "projects/pc/slider/E-store/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/E-store/pic0.webp",
+          "projects/mobile/slider/E-store/pic1.webp",
+          "projects/mobile/slider/E-store/pic2.webp",
+          "projects/mobile/slider/E-store/pic3.webp",
+        ],
+      },
+    },
+
     {
       completed: true,
       thumbnail: {
@@ -60,6 +91,9 @@ export const ProjectsInfo = [
       },
     },
 
+  ],
+
+  [
     {
       completed: true,
       thumbnail: {
@@ -89,9 +123,7 @@ export const ProjectsInfo = [
         ],
       },
     },
-  ],
 
-  [
     {
       completed: true,
       thumbnail: {
@@ -99,7 +131,7 @@ export const ProjectsInfo = [
         mobile: "projects/mobile/thumbnail/E-commerce.webp",
       },
       modal: {
-        name: "E-commerce",
+        name: "E-commerce (firstApp)",
         languages: ["ReactJS", "Redux", "Bootstrap", "Sass"],
         description:
           "This website is an E-commerce application. It includes multi pages such as home, shop, product details, checkout, and cart built with ReactJS and Redux for building a functional and dynamic user interface.",

@@ -4,21 +4,20 @@ import RightContent from "./RightContent";
 import { motion } from "framer-motion";
 import { Languages_Tools } from "./data";
 import { Languages_header } from "./LanguagesHeader";
+
 export default function SkillsSection() {
   const [selectedLang, setSelectedLang] = useState("");
 
   const handleMouseEner = (logo) => {
     setSelectedLang(logo);
   };
-// prevent the re render here and in the contact compoenent
+
   return (
     <Wrapper>
       <div className="space-y-4 lg:space-y-8 ">
         {Languages_Tools.map((lang, i) => (
           <LeftSection
-            handleMouseEner={handleMouseEner}
-            lang={lang}
-            i={i}
+            {...{ selectedLang, handleMouseEner, lang, i }}
             key={"lang" + i}
           ></LeftSection>
         ))}
@@ -28,7 +27,8 @@ export default function SkillsSection() {
   );
 }
 // ------------LEFT CONTANT--------
-const LeftSection = ({ lang, handleMouseEner, i }) => {
+const LeftSection = (props) => {
+  const { selectedLang, handleMouseEner, lang, i } = props;
   const { p, logos, logo_name } = lang;
 
   return (
@@ -39,7 +39,12 @@ const LeftSection = ({ lang, handleMouseEner, i }) => {
       {/* loggo */}
       <LogosRow {...Logo_wrapper_variants} custom={i}>
         {logos.map((logo, i) => (
-          <Logo onClick={() => handleMouseEner(logo_name[i])} key={i}>
+          <Logo
+            $selectedLang={selectedLang}
+            $langName={logo_name[i]}
+            onClick={() => handleMouseEner(logo_name[i])}
+            key={i}
+          >
             <img alt={logo} loading="lazy" src={logo} />
           </Logo>
         ))}
@@ -69,6 +74,8 @@ gap-y-1
 `;
 
 const Logo = tw.div`
+${({ $selectedLang, $langName }) =>
+  $selectedLang === $langName && "!bg-[#4f4f4f] [&>img]:scale-[1.3]"}
 logo-wrapper 
 relative 
 overflow-hidden
@@ -90,4 +97,3 @@ lg:gap-y-0
 gap-y-10 
 gap-x-2
 `;
-

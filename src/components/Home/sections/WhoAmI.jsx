@@ -8,11 +8,11 @@ export default function WhoAmI() {
   return (
     <Section>
       <Line>
-        <small className="text-4xl font-bold md:text-6xl">Hi</small>, I'm Osama
-        Khaled,
+        <small className="text-4xl font-bold md:text-6xl">Hi</small>
+        <p className="underline underline-offset-4 ">I'm Osama Khaled</p>
       </Line>
       <Line>
-        a <Frontend>front-end</Frontend> developer.
+        a <Frontend>react-js</Frontend> developer.
       </Line>
       <a
         className="mt-6"

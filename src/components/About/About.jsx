@@ -5,6 +5,8 @@ import PageWrapper from "../../Global-Comps/futures/PageWrapper";
 import SectionHeader from "../../Global-Comps/futures/SectionHeader";
 import ContentWrapper from "../../Global-Comps/futures/ContentWrapper";
 import LetterReveal from "../../Global-Comps/futures/Text_animation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function About() {
   let letter_i = 0;
@@ -26,9 +28,9 @@ export default function About() {
                     letter_i={letter_i++}
                     opaWaitTime={3}
                   >
-                    <span>-{"\u00A0"}</span>
+                    -{"\u00A0"}
                   </LetterReveal>
-
+                  {/* words */}
                   <div>
                     {line
                       .replaceAll("-", `${"\u00A0"}`)
@@ -36,6 +38,7 @@ export default function About() {
                       .map((word, word_i) => (
                         <p className="inline-block" key={word_i}>
                           {word.split("").map((letter, i) => (
+                            // letter
                             <LetterReveal
                               opaDelay={0.01}
                               opaSpeed={0.06}
@@ -55,9 +58,11 @@ export default function About() {
           </Text>
           {/* ------------ */}
           <ImgWrapper>
-            <img
+            <LazyLoadImage
+              effect="blur"
+              wrapperProps={{ style: { transitionDelay: "0s" } }}
               src="about-img.avif"
-              className="object-cover w-full"
+              className="object-cover w-full max-[1024px]:h-[40vh]"
               alt="about-img"
             />
           </ImgWrapper>
@@ -92,7 +97,7 @@ shadow-2xl
 shadow-black
 w-full
 block
-max-[375px]:hidden
+max-[640px]:hidden
 `;
 
 const text = [

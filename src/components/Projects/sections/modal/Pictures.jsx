@@ -7,12 +7,12 @@ export default function Pictures({ sliderImages ,i}) {
     <picture>
       <source media="(max-width: 645px)" srcSet={sliderImages.mobile[i]} />
       <LazyLoadImage
-        className="object-center w-full max-h-[70vh]"
-        alt={sliderImages}
+        className="object-center w-full"
+        alt={sliderImages.pc[i]}
         src={sliderImages.pc[i]}
         placeholder={
           <div className="flex items-center justify-center p-24">
-            <Spinner size="xl" className="!p-24 text-4xl"></Spinner>
+            <Spinner size="lg" className="!p-24 text-4xl"></Spinner>
           </div>
         }
       ></LazyLoadImage>

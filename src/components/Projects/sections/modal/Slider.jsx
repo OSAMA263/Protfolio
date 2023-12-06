@@ -15,13 +15,13 @@ export default function Slider({ sliderImages }) {
   const swiperProps = {
     spaceBetween: 10,
     slidesPerView: 1,
+    allowTouchMove: true,
     modules: [Navigation],
     navigation: { nextEl: "#next", prevEl: "#prev" },
-
     breakpoints: {
+      1024: { allowTouchMove: false },
       645: {
         spaceBetween: 40,
-        slidesPerView: 1,
       },
     },
     onTransitionEnd: (e) => setActiveInd(e.activeIndex),
@@ -31,7 +31,7 @@ export default function Slider({ sliderImages }) {
     <>
       <Swiper {...swiperProps} className="rounded-xl">
         {sliderImages.pc.map((_, i) => (
-          <SwiperSlide key={i} className=" rounded-xl">
+          <SwiperSlide key={i} className="rounded-xl">
             <Pictures {...{ sliderImages, i }} />
           </SwiperSlide>
         ))}

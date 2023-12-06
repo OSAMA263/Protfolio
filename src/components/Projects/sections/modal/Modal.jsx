@@ -20,22 +20,20 @@ export default function Modal(props) {
   };
 
   return (
-    <>
-      <AlertDialog isCentered isOpen={openModal}>
-        <AlertDialogOverlay bg="blackAlpha.800">
-          <AlertDialogContent maxW={900} className="!bg-transparent">
-            {/* header */}
-            <ModalHeader {...{ handleCloseModal, modal }}></ModalHeader>
-            {/* body */}
-            <AlertDialogBody>
-              <Slider sliderImages={sliderImages} />
-            </AlertDialogBody>
-            {/* footer */}
-            <ModalFooter modal={modal}></ModalFooter>
-          </AlertDialogContent>
-        </AlertDialogOverlay>
-      </AlertDialog>
-    </>
+    <AlertDialog isCentered isOpen={openModal}>
+      <AlertDialogOverlay bg="blackAlpha.800">
+        <AlertDialogContent maxW={900} className="!bg-transparent">
+          {/* header */}
+          <ModalHeader {...{ handleCloseModal, modal }}></ModalHeader>
+          {/* body */}
+          <AlertDialogBody className="max-[640px]:w-[80%] max-[640px]:mx-auto">
+            <Slider sliderImages={sliderImages} />
+          </AlertDialogBody>
+          {/* footer */}
+          <ModalFooter modal={modal}></ModalFooter>
+        </AlertDialogContent>
+      </AlertDialogOverlay>
+    </AlertDialog>
   );
 }
 // ---------------

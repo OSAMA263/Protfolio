@@ -22,9 +22,11 @@ export default function ProjectsContainer() {
     spaceBetween: 10,
     grabCursor: false,
     slidesPerView: 1,
+    allowTouchMove: true,
     modules: [Navigation],
     navigation: { nextEl: "#next-slide", prevEl: "#prev-slide" },
     breakpoints: {
+      840:{allowTouchMove:false},
       645: {
         grabCursor: false,
         spaceBetween: 40,

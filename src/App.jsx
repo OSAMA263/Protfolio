@@ -12,18 +12,16 @@ delete theme.styles.global;
 
 function App() {
   return (
-    <>
-      <ChakraProvider disableGlobalStyle={true}>
-        <AppWrapper>
-          <Home />
-          <Navbar />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-        </AppWrapper>
-      </ChakraProvider>
-    </>
+    <ChakraProvider disableGlobalStyle={true}>
+      <AppWrapper>
+        <Home />
+        <Navbar />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </AppWrapper>
+    </ChakraProvider>
   );
 }
 

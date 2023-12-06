@@ -1,9 +1,12 @@
+/* eslint-disable react/display-name */
 import tw from "tailwind-styled-components";
 import { PiEyeClosedLight } from "react-icons/pi";
 import { LiaEyeSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Curtains from "./Curtains";
 import { memo } from "react";
+import { Spinner } from "@chakra-ui/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Project = (props) => {
   const { handleProjectClick, slide } = props;
@@ -40,12 +43,15 @@ const ThumbNail = memo(({ thumbnail }) => {
   return (
     <picture className="w-full">
       <source media="(max-width:645px )" srcSet={thumbnail.mobile} />
-      <img
-        loading="lazy"
-        className="object-cover w-full"
+      <LazyLoadImage
+        className="sm:object-cover w-full"
         alt={thumbnail.pc}
         src={thumbnail.pc}
-      />
+        placeholder={
+          <div className="flex items-center justify-center p-24">
+            <Spinner size="xl" className="!p-24 text-4xl"></Spinner>
+          </div>
+        }/>
     </picture>
   );
 });
