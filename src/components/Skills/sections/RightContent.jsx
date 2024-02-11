@@ -54,8 +54,8 @@ const info = {
   bootstrap:
     "I am proficient in using Bootstrap. It is quick and straightforward to develop simple websites, and I used it frequently when I first began programming.",
   tailwindcss:
-    "I have a lot of experience utilizing Tailwind. I also use Bootstrap, but I prefer Tailwind because it gives me more design flexibility. and I mostly utilize it for my projects.",
-  sass: "I respect Sass as a language, and I have used it before, but I prefer to use CSS . The code become unreadable. I am not a fan of this dumb language.",
+    "I have a lot of experience utilizing Tailwind. I also use Bootstrap, but I prefer Tailwind because it gives me more design flexibility. and I mostly utilize it in my projects.",
+  sass: "I respect Sass as a language, and I have used it before, but I prefer to use tailwind .You have to make separate file for every component. And i am not a fan of that.",
   vite: "Working with Vite and utilizing its ability to create React websites and quickly deploy them on platforms, I have greatly improved my experience.",
   chakraUi:
     "I'm good at using Chakra-UI to build components and pages that are ready to use and have a great, simple interface and easy to use.",

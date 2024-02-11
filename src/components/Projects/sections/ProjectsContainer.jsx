@@ -93,6 +93,7 @@ grid
 grid-cols-2
 grid-rows-4
 overflow-hidden
+sm:gap-5
 gap-2
 sm:p-4
 `;

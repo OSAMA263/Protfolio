@@ -16,7 +16,7 @@ export default function About() {
         <Wrapper>
           <Text>
             <SectionHeader>About Me</SectionHeader>
-            <ul className="flex flex-col sm:gap-y-4 gap-y-3">
+            <ul className="flex flex-col sm:gap-y-4 gap-y-3 h-full">
               {text.map((line, line_i) => (
                 <li
                   className="w-fit flex 2xl:leading-relaxed xl:leading-normal lg:leading-tight"
@@ -62,7 +62,8 @@ export default function About() {
               effect="blur"
               wrapperProps={{ style: { transitionDelay: "0s" } }}
               src="about-img.avif"
-              className="object-cover w-full max-[1024px]:h-[40vh]"
+              className="object-cover w-full xl:h-full h-[30vh] shadow-2xl
+              shadow-black"
               alt="about-img"
             />
           </ImgWrapper>
@@ -71,14 +72,14 @@ export default function About() {
     </PageWrapper>
   );
 }
-
 const Wrapper = tw(motion.div)`
 about
 grid
 xl:gap-x-10
 gap-x-2
-lg:grid-cols-2
-lg:gap-y-0
+xl:grid-cols-2
+xl:gap-y-0
+items-center
 gap-y-6
 max-[375px]:!grid-rows-1
 max-[350px]:text-sm
@@ -86,24 +87,23 @@ max-[350px]:text-sm
 
 const Text = tw(motion.div)`
 flex
-flex-col   
+flex-col
 lg:tracking-wide
 max-[380px]:space-y-2
-justify-between
+justify-start
 `;
 
 const ImgWrapper = tw(motion.div)`
-shadow-2xl
-shadow-black
 w-full
 block
+max-h-fit
 max-[640px]:hidden
 `;
 
 const text = [
   "Hello- again!",
-  "As- a- frontend- developer,- ReactJS- is- a- tool- I- frequently- utilize- in- my- work,- aside- from- some- libraries- and- packages- like- Tailwind,- Framer- Motion,- and- others.",
-  "I- graduated- from- Delta- Academy- of- Science- with- a- bachelor's- degree- in- information- systems.",
-  "I- enjoy- finding- bugs- and- stay- up- all- night- to- fix- them- it's- so- much- fun...yep.",
-  "I'm- trying- to- find- a- job- where- I- can- be- trusted,- learn- more,- enhance- my- skills, and- gain- guidance- from- more- experienced- employees.",
+  "As- a- frontend- ReactJS- developer,- I- use- React- alongside- with- important- libraries- like- Tailwind- for- styling- and- ChakraUI- for- superior- user- interface- elements.",
+  "I- mostly- concentrate- on- useing- Framer- Motion- primarily- to- create- visually- charming- for- my- web- development- projects.",
+  "Graduated- from- Delta- Academy- of- Science- with- a- bachelor's- degree- in- information- systems.",
+  "I- am- looking- for- a- job- where- I- can- apply- my- knowledge- and- provide- appealing- websites- and- gain- guidance- from- experienced- colleagues.",
 ];

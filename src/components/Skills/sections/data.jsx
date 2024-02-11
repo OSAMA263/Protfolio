@@ -6,9 +6,8 @@ export const Languages_Tools = [
       "logo/css3.svg",
       "logo/javascript.svg",
       "logo/sass.svg",
-      "logo/vite.svg",
     ],
-    logo_name: ["html", "css3", "javascript", "sass", "vite"],
+    logo_name: ["html", "css3", "javascript", "sass"],
   },
   {
     p: "LIERARIES -AND -FRAMEWORKS",
@@ -33,7 +32,7 @@ export const Languages_Tools = [
   },
   {
     p: "OTHER",
-    logos: ["logo/github.svg", "logo/git.svg"],
-    logo_name: ["github", "git"],
+    logos: ["logo/github.svg", "logo/git.svg", "logo/vite.svg"],
+    logo_name: ["github", "git", "vite"],
   },
 ];

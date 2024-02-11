@@ -59,7 +59,7 @@ const Logo_wrapper_variants = {
   },
   whileInView: (i) => ({
     opacity: 1,
-    transition: { duration: 0.4, delay: 2 * i + 3.3 },
+    transition: { duration: 0.4, delay: 1.5 * i + 3.3 },
   }),
   viewport: { once: true },
 };

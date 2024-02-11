@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 import { AiOutlineDownload } from "react-icons/ai";
-import PDF from "../../../../public/Resume.pdf";
+import PDF from "../../../../public/CV.pdf";
 export default function WhoAmI() {
   return (
     <Section>
@@ -16,7 +16,7 @@ export default function WhoAmI() {
       <a
         className="mt-6"
         href={PDF}
-        download="Osama-Khaled"
+        download="CV"
         target="_blank"
         rel="noreferrer"
       >

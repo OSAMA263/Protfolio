@@ -3,37 +3,6 @@ export const ProjectsInfo = [
     {
       completed: true,
       thumbnail: {
-        pc: "projects/pc/thumbnail/your-apartment.webp",
-        mobile: "projects/mobile/thumbnail/your-apartment.webp",
-      },
-      modal: {
-        name: "Your Apartment",
-        languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "SwiperJS"],
-        description:
-          "A website for an apartment rental service that shows a responsive design and carousel images slider, presenting information on rental properties and services in an attractive and informative manner.",
-        live: "https://osama263.github.io/Your-Apartment/",
-        github: "https://github.com/OSAMA263/Your-Apartment",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/your-apartment/pic0.webp",
-          "projects/pc/slider/your-apartment/pic1.webp",
-          "projects/pc/slider/your-apartment/pic2.webp",
-          "projects/pc/slider/your-apartment/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/your-apartment/pic0.webp",
-          "projects/mobile/slider/your-apartment/pic1.webp",
-          "projects/mobile/slider/your-apartment/pic2.webp",
-          "projects/mobile/slider/your-apartment/pic3.webp",
-        ],
-      },
-    },
-
-    
-    {
-      completed: true,
-      thumbnail: {
         pc: "projects/pc/thumbnail/E-store.webp",
         mobile: "projects/mobile/thumbnail/E-store.webp",
       },
@@ -60,7 +29,67 @@ export const ProjectsInfo = [
         ],
       },
     },
-
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/your-apartment.webp",
+        mobile: "projects/mobile/thumbnail/your-apartment.webp",
+      },
+      modal: {
+        name: "Your Apartment",
+        languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "SwiperJS"],
+        description:
+          "A website for an apartment rental service that shows a responsive design and carousel images slider, presenting information on rental properties and services in an attractive and informative manner.",
+        live: "https://osama263.github.io/Your-Apartment/",
+        github: "https://github.com/OSAMA263/Your-Apartment",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/your-apartment/pic0.webp",
+          "projects/pc/slider/your-apartment/pic1.webp",
+          "projects/pc/slider/your-apartment/pic2.webp",
+          "projects/pc/slider/your-apartment/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/your-apartment/pic0.webp",
+          "projects/mobile/slider/your-apartment/pic1.webp",
+          "projects/mobile/slider/your-apartment/pic2.webp",
+          "projects/mobile/slider/your-apartment/pic3.webp",
+        ],
+      },
+    },
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/constructs.webp",
+        mobile: "projects/mobile/thumbnail/constructs.webp",
+      },
+      modal: {
+        name: "constructs",
+        languages: ["ReactJS", "Tailwind", "Sass", "Chakra-UI"],
+        description:
+          "Utilized React to build scalable, efficient, and reusable UI components for a web application ,and Used Chakra UI to create responsive, accessible, and performant user interfaces,Utilized Redux to store the user cart and wishlist products",
+        live: "https://osama263.github.io/constructs/",
+        github: "https://github.com/OSAMA263/constructs",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/constructs/pic0.webp",
+          "projects/pc/slider/constructs/pic1.webp",
+          "projects/pc/slider/constructs/pic2.webp",
+          "projects/pc/slider/constructs/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/constructs/pic0.webp",
+          "projects/mobile/slider/constructs/pic1.webp",
+          "projects/mobile/slider/constructs/pic2.webp",
+          "projects/mobile/slider/constructs/pic3.webp",
+        ],
+      },
+    },
+  ],
+  // slides2
+  [
     {
       completed: true,
       thumbnail: {
@@ -90,10 +119,6 @@ export const ProjectsInfo = [
         ],
       },
     },
-
-  ],
-
-  [
     {
       completed: true,
       thumbnail: {
@@ -153,7 +178,9 @@ export const ProjectsInfo = [
         ],
       },
     },
-
+  ],
+  // slides 3
+  [
     {
       completed: false,
       thumbnail: {
@@ -161,7 +188,7 @@ export const ProjectsInfo = [
         mobile: "projects/mobile/thumbnail/in-progress.webp",
       },
       modal: {
-        name: "Brand store",
+        name: "",
       },
       sliderImages: {
         pc: [],
