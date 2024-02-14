@@ -12,19 +12,15 @@ import tw from "tailwind-styled-components";
 import Slider from "./Slider";
 
 export default function Modal(props) {
-  const { openModal, setOpenModal } = props;
+  const { onClose, isOpen } = props;
   const { modal, sliderImages } = props.selectedProject;
 
-  const handleCloseModal = () => {
-    setOpenModal(false);
-  };
-
   return (
-    <AlertDialog isCentered isOpen={openModal}>
+    <AlertDialog isCentered onClose={onClose} isOpen={isOpen}>
       <AlertDialogOverlay bg="blackAlpha.800">
         <AlertDialogContent maxW={900} className="!bg-transparent">
           {/* header */}
-          <ModalHeader {...{ handleCloseModal, modal }}></ModalHeader>
+          <ModalHeader {...{ onClose, modal }}></ModalHeader>
           {/* body */}
           <AlertDialogBody className="max-[640px]:w-[80%] max-[640px]:mx-auto">
             <Slider sliderImages={sliderImages} />
@@ -37,7 +33,7 @@ export default function Modal(props) {
   );
 }
 // ---------------
-const ModalHeader = ({ handleCloseModal, modal }) => {
+const ModalHeader = ({ onClose, modal }) => {
   return (
     <AlertDialogHeader className="flex justify-between mb-2">
       {/* project links */}
@@ -61,7 +57,7 @@ const ModalHeader = ({ handleCloseModal, modal }) => {
       {/* CLOSE MODAL BUTTON */}
       <button
         className="[&>svg]:hover:text-gray-600"
-        onClick={handleCloseModal}
+        onClick={onClose}
         aria-label="close-modal"
       >
         <MdCloseFullscreen className="text-2xl md:text-3xl" />

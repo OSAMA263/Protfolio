@@ -1,9 +1,10 @@
+import { useMediaQuery } from "@chakra-ui/media-query";
 import { motion, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import tw from "tailwind-styled-components";
 
 export default function AppWrapper({ children }) {
-  const smDevices = window.matchMedia("(max-width:1012px)");
+  const [SM_Device] = useMediaQuery("(max-width: 1012px)");
   const circleRef = useRef(null);
   // const smspring = { stiffness: 280, damping: 10, mass: 0.1 };
   const lgspring = { stiffness: 85, damping: 15, mass: 0.1 };
@@ -11,24 +12,21 @@ export default function AppWrapper({ children }) {
   // const smPosition = { x: useSpring(0, smspring), y: useSpring(0, smspring) };
 
   const handle_mouse_move = (e) => {
-    if (smDevices.matches) return;
+    if (SM_Device) return;
     const { clientX, clientY } = e;
     const { width, height } = circleRef.current.getBoundingClientRect();
-
     const moveX = clientX - width / 3;
     const moveY = clientY - height / 3;
-
     lgPposition.x.set(moveX);
     lgPposition.y.set(moveY);
 
     // smPosition.x.set(e.clientX);
     // smPosition.y.set(e.clientY);
   };
-
   return (
     <div onMouseMove={handle_mouse_move}>
       {children}
-      {!smDevices.matches && (
+      {!SM_Device && (
         <>
           <BigCircle ref={circleRef} style={lgPposition}></BigCircle>
           {/* <SmallCircle style={{ left: smPosition.x, top: smPosition.y }}></SmallCircle> */}

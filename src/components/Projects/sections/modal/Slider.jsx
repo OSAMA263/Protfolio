@@ -19,7 +19,6 @@ export default function Slider({ sliderImages }) {
     modules: [Navigation],
     navigation: { nextEl: "#next", prevEl: "#prev" },
     breakpoints: {
-      1024: { allowTouchMove: false },
       645: {
         spaceBetween: 40,
       },

@@ -7,15 +7,16 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { ProjectsInfo } from "./data";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { useDisclosure } from "@chakra-ui/react";
 
 export default function ProjectsContainer() {
   const [selectedProject, setSelectedProject] = useState({});
-  const [openModal, setOpenModal] = useState(false);
   const [activeInd, setActiveInd] = useState(0);
+  const { onOpen, onClose, isOpen } = useDisclosure();
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
-    setOpenModal(true);
+    onOpen();
   };
 
   const swiperProps = {
@@ -26,7 +27,6 @@ export default function ProjectsContainer() {
     modules: [Navigation],
     navigation: { nextEl: "#next-slide", prevEl: "#prev-slide" },
     breakpoints: {
-      840:{allowTouchMove:false},
       645: {
         grabCursor: false,
         spaceBetween: 40,
@@ -58,7 +58,7 @@ export default function ProjectsContainer() {
         </NavigateBtns>
       </Container>
       {/* modal */}
-      <Modal {...{ setOpenModal, openModal, selectedProject }} />
+      <Modal {...{ onClose, isOpen, selectedProject }} />
     </>
   );
 }

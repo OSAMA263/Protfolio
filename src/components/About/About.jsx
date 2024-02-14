@@ -9,52 +9,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function About() {
-  let letter_i = 0;
   return (
     <PageWrapper id="about">
       <ContentWrapper>
         <Wrapper>
           <Text>
             <SectionHeader>About Me</SectionHeader>
-            <ul className="flex flex-col sm:gap-y-4 gap-y-3 h-full">
-              {text.map((line, line_i) => (
-                <li
-                  className="w-fit flex 2xl:leading-relaxed xl:leading-normal lg:leading-tight"
-                  key={line_i}
-                >
-                  <LetterReveal
-                    opaDelay={0.01}
-                    opaSpeed={0.06}
-                    letter_i={letter_i++}
-                    opaWaitTime={3}
-                  >
-                    -{"\u00A0"}
-                  </LetterReveal>
-                  {/* words */}
-                  <div>
-                    {line
-                      .replaceAll("-", `${"\u00A0"}`)
-                      .split(" ")
-                      .map((word, word_i) => (
-                        <p className="inline-block" key={word_i}>
-                          {word.split("").map((letter, i) => (
-                            // letter
-                            <LetterReveal
-                              opaDelay={0.01}
-                              opaSpeed={0.06}
-                              opaWaitTime={3}
-                              letter_i={letter_i++}
-                              key={i}
-                            >
-                              {letter}
-                            </LetterReveal>
-                          ))}
-                        </p>
-                      ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <TextPoints/>
           </Text>
           {/* ------------ */}
           <ImgWrapper>
@@ -72,6 +33,52 @@ export default function About() {
     </PageWrapper>
   );
 }
+
+const TextPoints = () => {
+  let letter_i = 0;
+
+  return (
+    <ul className="flex flex-col sm:gap-y-4 gap-y-3 h-full">
+      {text.map((line, line_i) => (
+        <li
+          className="w-fit flex 2xl:leading-relaxed xl:leading-normal lg:leading-tight"
+          key={line_i}
+        >
+          <LetterReveal
+            opaDelay={0.01}
+            opaSpeed={0.06}
+            letter_i={letter_i++}
+            opaWaitTime={3}
+          >
+            -{"\u00A0"}
+          </LetterReveal>
+          {/* words */}
+          <div>
+            {line
+              .replaceAll(" ", `${"\u00A0"}`)
+              .split("-")
+              .map((word, word_i) => (
+                <p className="inline-block" key={word_i}>
+                  {word.split("").map((letter, i) => (
+                    // letter
+                    <LetterReveal
+                      opaDelay={0.01}
+                      opaSpeed={0.06}
+                      opaWaitTime={3}
+                      letter_i={letter_i++}
+                      key={i}
+                    >
+                      {letter}
+                    </LetterReveal>
+                  ))}
+                </p>
+              ))}
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+};
 const Wrapper = tw(motion.div)`
 about
 grid
@@ -101,9 +108,9 @@ max-[640px]:hidden
 `;
 
 const text = [
-  "Hello- again!",
-  "As- a- frontend- ReactJS- developer,- I- use- React- alongside- with- important- libraries- like- Tailwind- for- styling- and- ChakraUI- for- superior- user- interface- elements.",
-  "I- mostly- concentrate- on- useing- Framer- Motion- primarily- to- create- visually- charming- for- my- web- development- projects.",
-  "Graduated- from- Delta- Academy- of- Science- with- a- bachelor's- degree- in- information- systems.",
-  "I- am- looking- for- a- job- where- I- can- apply- my- knowledge- and- provide- appealing- websites- and- gain- guidance- from- experienced- colleagues.",
+  "Hello -again!",
+  "As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.",
+  "I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.",
+  "Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -information -systems.",
+  "I -am -looking -for -a -job -where -I -can -apply -my -knowledge -and -provide -cool -ass -websites -and -gain -guidance -from -experienced -colleagues.",
 ];

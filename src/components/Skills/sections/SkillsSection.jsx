@@ -45,7 +45,7 @@ const LeftSection = (props) => {
             onClick={() => handleMouseEner(logo_name[i])}
             key={i}
           >
-            <img alt={logo} loading="lazy" src={logo} />
+            <img alt={logo} loading="lazy" className="rounded-2xl" src={logo} />
           </Logo>
         ))}
       </LogosRow>
@@ -65,12 +65,10 @@ const Logo_wrapper_variants = {
 };
 
 const LogosRow = tw(motion.div)`
-flex 
+flex
 flex-wrap
-md:gap-x-4
-md:gap-y-4
-gap-x-1
-gap-y-1
+md:gap-4
+gap-1
 `;
 
 const Logo = tw.div`
