@@ -1,6 +1,6 @@
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { motion, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import tw from "tailwind-styled-components";
 
 export default function AppWrapper({ children }) {
