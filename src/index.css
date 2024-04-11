@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 * {
-  cursor: url("../public/cursor.jpg"), auto !important;
+  cursor: url("/cursor.jpg"), auto !important;
 }
 body {
   margin: 0;
@@ -13,7 +13,7 @@ body {
   background-color: #111111;
   user-select: none;
   color: white;
-  background-image: url("../public/background.png");
+  background-image: url("/background.png");
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -33,14 +33,14 @@ a,
 input,
 textarea,
 button {
-  cursor: url("../public/cursor.jpg"), auto !important;
+  cursor: url("/cursor.jpg"), auto !important;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
   max-width: 100%;
   height: 100%;
-  transition: all 0.5s;
+  transition: all 0.4s ease-in-out;
 }
 p {
   color: #d4d4d4;
@@ -59,6 +59,27 @@ textarea {
 .who-wrapper:has(h1 > span:is(:hover)) h1 {
   color: #eaeaea0e;
 }
+.sides-shadow::after {
+  content: "";
+  position: absolute;
+  z-index: 69;
+  box-shadow: -20px 0px 50px 10px #0c0c0c45;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width:0px;
+}
+.sides-shadow::before {
+  content: "";
+  position: absolute;
+  z-index: 69;
+  box-shadow: 20px 0px 50px 10px #0c0c0c45;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width:0px;}
 /* myskills left section*/
 .logo-wrapper::after {
   content: "";
@@ -206,8 +227,8 @@ input:focus {
   left: 100%;
   transform: translate(50%, 50%) skew(-45deg);
 }
-.chakra-form-control:has(input:focus) > label,
-.chakra-form-control:has(textarea:focus) > label {
+input:focus > label,
+textarea:focus > label {
   color: white !important;
 }
 /* --------validation */

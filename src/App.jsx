@@ -1,12 +1,12 @@
-import Navbar from "./Global-Comps/Navbars/Navbar";
-import Home from "./components/Home/Home";
-import Projects from "./components/Projects/Projects";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import Skills from "./components/Skills/Skills";
-import { ChakraProvider } from "@chakra-ui/react";
-import AppWrapper from "./Global-Comps/AppWrapper";
+import {ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@chakra-ui/react";
+import AppWrapper from "./shared/AppWrapper"
+import Navbar from "./shared/Navbar"
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
 
 delete theme.styles.global;
 
