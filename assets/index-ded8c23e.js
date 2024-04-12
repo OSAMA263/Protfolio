@@ -454,7 +454,7 @@ bg-[#17171738]
 overflow-hidden
 duration-700
 relative
-`,x5=[{link:"home",label:"Who?"},{link:"about",label:"About Me"},{link:"skills",label:"Skills"},{link:"projects",label:"Projects"},{link:"contact",label:"Contact"}];function eu({children:e,id:t}){const r=b.useRef(null),n=NL(r,{once:!0});return w.jsx($W,{id:t,children:w.jsx(OW,{ref:r,...PW,$id:t,children:n&&e})})}const PW={initial:{opacity:0},whileInView:{opacity:1},transition:{duration:.4,delay:.6},viewport:{once:!0}},OW=ce(ve.div)`
+`,x5=[{link:"home",label:"Who?"},{link:"about",label:"About Me"},{link:"skills",label:"Skills"},{link:"projects",label:"Projects"},{link:"contact",label:"Contact"}];function eu({children:e,id:t}){const r=b.useRef(null),n=NL(r,{once:!0});return w.jsx($W,{id:t,children:w.jsx(OW,{ref:r,...PW,$id:t,children:n&&e})})}const PW={initial:{opacity:0},whileInView:{opacity:1},transition:{duration:.4,delay:.4},viewport:{once:!0}},OW=ce(ve.div)`
 ${e=>e.$id==="home"&&"!w-[100%] !mx-0"}
   flex
   flex-col
@@ -532,7 +532,7 @@ hover:text-[#000000]
 hover:font-semibold
 transition-all
 p-1
-`;function GW(){return w.jsxs(eu,{id:"home",children:[w.jsx(FW,{}),w.jsx(BW,{})]})}function Rf({children:e}){return w.jsx(YW,{...qW,children:e})}const qW={initial:{x:"-100%"},whileInView:{x:0,transition:{x:{duration:1.1,delay:.8}}},viewport:{once:!0}},YW=ce(ve.h1)`
+`;function GW(){return w.jsxs(eu,{id:"home",children:[w.jsx(FW,{}),w.jsx(BW,{})]})}function Rf({children:e}){return w.jsx(YW,{...qW,children:e})}const qW={initial:{x:"-100%"},whileInView:{x:0,transition:{x:{duration:.9,delay:.8}}},viewport:{once:!0}},YW=ce(ve.h1)`
 text-2xl
 max-[350px]:text-lg
 mb-5
@@ -566,7 +566,7 @@ w-full
 block
 max-h-fit
 max-[640px]:hidden
-`,iU=["Hello -again!","As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.","I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.","Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -information -systems.","I -am -looking -for -a -job -where -I -can -apply -my -knowledge -and -provide -cool -ass -websites -and -gain -guidance -from -experienced -colleagues."];function oU({selectedLang:e}){return w.jsx(lU,{children:w.jsx(wo,{mode:"popLayout",children:w.jsx(sU,{...aU,children:uU[e]},e)})})}const aU={initial:{y:"-100%"},animate:{y:"0%"},exit:{y:"200%"},transition:{duration:1}},sU=ce(ve.p)`
+`,iU=["Hello -again!","Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -information -systems.","As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.","I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.","I -am -constantly -learning -new -languages -and -tools -and -not -just -relying -on -the -knowledge -i -already -have."];function oU({selectedLang:e}){return w.jsx(lU,{children:w.jsx(wo,{mode:"popLayout",children:w.jsx(sU,{...aU,children:uU[e]},e)})})}const aU={initial:{y:"-100%"},animate:{y:"0%"},exit:{y:"200%"},transition:{duration:1}},sU=ce(ve.p)`
 border-l-[1px]
 px-2
 text-xl
@@ -625,7 +625,7 @@ left-1/2
 -translate-x-1/2
 justify-between
 top-1/2
-`;function nq(e){const{onClose:t,isOpen:r}=e,{modal:n,sliderImages:i}=e.selectedProject;return w.jsx(RB,{isCentered:!0,onClose:t,isOpen:r,children:w.jsx(qE,{bg:"blackAlpha.800",children:w.jsxs(zB,{maxW:900,className:"!bg-transparent",children:[w.jsx(iq,{onClose:t,modal:n}),w.jsx(YE,{className:"max-[640px]:w-[80%] max-[640px]:mx-auto !p-0",children:w.jsx(eq,{sliderImages:i})}),w.jsx(oq,{modal:n})]})})})}const iq=({onClose:e,modal:t})=>w.jsxs(GE,{className:"flex justify-between mb-2 max-sm:!p-2",children:[w.jsxs("div",{className:"flex flex-wrap items-end justify-center",children:[w.jsxs("h1",{className:"text-lg sm:text-2xl",children:[t.name,t.name==="E-commerce"&&w.jsx("span",{className:"hidden text-sm sm:inline",children:"(my first project)"}),"__"," "]}),w.jsxs("div",{className:"flex",children:[w.jsx(Ew,{href:t.github,target:"_blank",children:w.jsx(wU,{})}),w.jsx(Ew,{href:t.live,target:"_blank",children:w.jsx(xU,{})})]})]}),w.jsx("button",{className:"[&>svg]:hover:text-gray-600",onClick:e,"aria-label":"close-modal",children:w.jsx(bU,{className:"text-2xl md:text-3xl"})})]}),oq=({modal:e})=>(console.log(e.description),w.jsx(UE,{className:"!justify-start gap-y-2 flex-col max-sm:!p-4",children:w.jsxs(w.Fragment,{children:[w.jsx("ul",{className:"list-disc [&>li::marker]:text-[#0aff9d] [&>li::marker]:sm:text-xl space-y-2",children:e.description.map((t,r)=>w.jsx("li",{className:"text-gray-300 [text-wrap:pretty]",children:t},"point"+r))}),w.jsx("div",{className:"flex flex-wrap justify-center gap-2",children:e.languages.map((t,r)=>w.jsx(aq,{children:t},"lang"+r))})]})})),aq=ce.span`
+`;function nq(e){const{onClose:t,isOpen:r}=e,{modal:n,sliderImages:i}=e.selectedProject;return w.jsx(RB,{isCentered:!0,onClose:t,isOpen:r,children:w.jsx(qE,{bg:"blackAlpha.800",children:w.jsxs(zB,{maxW:900,className:"!bg-transparent",children:[w.jsx(iq,{onClose:t,modal:n}),w.jsx(YE,{className:"max-[640px]:w-[80%] max-[640px]:mx-auto !p-0",children:w.jsx(eq,{sliderImages:i})}),w.jsx(oq,{modal:n})]})})})}const iq=({onClose:e,modal:t})=>w.jsxs(GE,{className:"flex justify-between mb-2 max-sm:!p-2",children:[w.jsxs("div",{className:"flex flex-wrap items-end justify-center",children:[w.jsxs("h1",{className:"text-lg sm:text-2xl",children:[t.name,t.name==="E-commerce"&&w.jsx("span",{className:"hidden text-sm sm:inline",children:"(my first project)"}),"__"," "]}),w.jsxs("div",{className:"flex",children:[w.jsx(Ew,{href:t.github,target:"_blank",children:w.jsx(wU,{})}),w.jsx(Ew,{href:t.live,target:"_blank",children:w.jsx(xU,{})})]})]}),w.jsx("button",{className:"[&>svg]:hover:text-gray-600",onClick:e,"aria-label":"close-modal",children:w.jsx(bU,{className:"text-2xl md:text-3xl"})})]}),oq=({modal:e})=>(console.log(e.description),w.jsx(UE,{className:"!justify-start gap-y-2 flex-col max-sm:!p-4",children:w.jsxs(w.Fragment,{children:[w.jsx("ul",{className:"list-disc [&>li::marker]:text-[#0aff9d] [&>li::marker]:sm:text-xl text-sm space-y-2",children:e.description.map((t,r)=>w.jsx("li",{className:"text-gray-300 [text-wrap:pretty]",children:t},"point"+r))}),w.jsx("div",{className:"flex flex-wrap justify-center gap-2",children:e.languages.map((t,r)=>w.jsx(aq,{children:t},"lang"+r))})]})})),aq=ce.span`
 rounded-md
 bg-[#131214]
 text-white
