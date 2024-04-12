@@ -10,9 +10,9 @@ const H1Variants = {
   },
   whileInView: {
     x: 0,
-    transition: { x: { duration: 1.1, delay: .8 } },
+    transition: { x: { duration: 0.9, delay: 0.8 } },
   },
- viewport: { once: true },
+  viewport: { once: true },
 };
 
 const H1 = tw(motion.h1)`

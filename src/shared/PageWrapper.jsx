@@ -18,7 +18,7 @@ export default function PageWrapper({ children, id }) {
 const motionVariants = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  transition: { duration: .4, delay: 0.6 },
+  transition: { duration: .4, delay: 0.4 },
   viewport: { once: true },
 };
 

@@ -72,7 +72,7 @@ const ModalFooter = ({ modal }) => {
   return (
     <AlertDialogFooter className="!justify-start gap-y-2 flex-col max-sm:!p-4">
       <>
-        <ul className="list-disc [&>li::marker]:text-[#0aff9d] [&>li::marker]:sm:text-xl space-y-2">
+        <ul className="list-disc [&>li::marker]:text-[#0aff9d] [&>li::marker]:sm:text-xl text-sm space-y-2">
           {modal.description.map((point, i) => (
             <li className="text-gray-300 [text-wrap:pretty]" key={"point" + i}>
               {point}
