@@ -19,8 +19,8 @@ function LgNavbar() {
     animate: (i) => ({
       x: "0%",
       transition: {
-        delay: 0.3 * i + 2.7,
-        duration: 0.8,
+        delay: 0.3 * i + 2.2,
+        duration: 0.6,
       },
     }),
   };
@@ -97,8 +97,8 @@ function SmNavbar() {
     animate: ({ isOpen, i }) => ({
       x: isOpen ? ["-200%", "0%"] : ["0%", "200%"],
       transition: {
-        delay: 0.1 * i + 0.3,
-        duration: 0.8,
+        delay: 0.1 * i + 0.2,
+        duration: 0.7,
       },
     }),
   };
