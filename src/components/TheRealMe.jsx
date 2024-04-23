@@ -99,7 +99,7 @@ const Page = ({ easterEgg, setEasterEgg }) => {
         <div>
           <h2>
             GJ ON FINDING THE TREASURE THINGY, idk, <br /> heres some{" "}
-            <a href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1&t=3181s">
+            <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1&t=3181s">
               music
             </a>{" "}
             to help you suffer less when you code.
