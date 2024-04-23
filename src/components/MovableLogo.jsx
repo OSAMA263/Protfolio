@@ -26,8 +26,8 @@ export default function MovableLogo(props) {
   // ----------
   const { setEasterEgg } = useContext(Context);
   const handleClick = () => {
-    if (!localStorage.one) {
-      localStorage.setItem("one", true);
+    if (!localStorage.dont) {
+      localStorage.setItem("dont", true);
       setEasterEgg(true);
     }
   };

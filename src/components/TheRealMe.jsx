@@ -2,8 +2,9 @@ import { createStandaloneToast } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../context/ContextProvider";
 import tw from "tailwind-styled-components";
+import music from "/8bit-music.mp3";
 
-const sound = new Audio("/8bit-music.mp3");
+const sound = new Audio(music);
 
 export const TheRealMe = () => {
   const { toast } = createStandaloneToast();
