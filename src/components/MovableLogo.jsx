@@ -1,9 +1,10 @@
 import { useSpring, motion } from "framer-motion";
 import tw from "tailwind-styled-components";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { Context } from "../context/ContextProvider";
 
 export default function MovableLogo(props) {
-  const { svgLogo, svgPosition, spring, wrapperStyle ,i} = props;
+  const { svgLogo, svgPosition, spring, wrapperStyle, i } = props;
   // ----------
   const position = { x: useSpring(0, spring), y: useSpring(0, spring) };
   const ref = useRef(null);
@@ -23,6 +24,13 @@ export default function MovableLogo(props) {
     position.y.set(0);
   };
   // ----------
+  const { setEasterEgg } = useContext(Context);
+  const handleClick = () => {
+    if (!localStorage.one) {
+      localStorage.setItem("one", true);
+      setEasterEgg(true);
+    }
+  };
   return (
     <LogoWrapper
       ref={ref}
@@ -32,7 +40,12 @@ export default function MovableLogo(props) {
       onMouseMove={mouse_move}
       onMouseLeave={mouse_leave}
     >
-      <Logo whileHover={{ scale: 1.9 }} style={position}>
+      <Logo
+        onClick={() => (i === 25 ? handleClick() : null)}
+        $i={i}
+        whileHover={{ scale: 1.9 }}
+        style={position}
+      >
         {svgLogo}
       </Logo>
     </LogoWrapper>
@@ -45,12 +58,13 @@ const logoAnimation = {
   animate: (i) => ({ opacity: 1, transition: { delay: 0.029 * i + 1.6 } }),
 };
 
-const LogoWrapper = tw(motion.div)`                              
+const LogoWrapper = tw(motion.div)`
   absolute
 `;
 
 const Logo = tw(motion.div)`
-  [&>svg]:hover:text-white
+${({ $i }) =>
+  $i === 25 ? "[&>svg]:hover:text-[#0aff9d]" : "[&>svg]:hover:text-white"}
   [&>svg]:text-gray-600
   p-3
 `;
