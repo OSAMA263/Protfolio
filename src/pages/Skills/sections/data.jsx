@@ -5,9 +5,10 @@ export const Languages_Tools = [
       "logo/html.svg",
       "logo/css3.svg",
       "logo/javascript.svg",
+      "logo/typescript.svg",
       "logo/sass.svg",
     ],
-    logo_name: ["html", "css3", "javascript", "sass"],
+    logo_name: ["html", "css3", "javascript","typescript", "sass"],
   },
   {
     p: "LIERARIES AND FRAMEWORKS",

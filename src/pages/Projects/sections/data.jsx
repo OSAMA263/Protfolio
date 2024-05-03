@@ -150,6 +150,43 @@ export const ProjectsInfo = [
     {
       completed: true,
       thumbnail: {
+        pc: "projects/pc/thumbnail/spiritfarer.webp",
+        mobile: "projects/mobile/thumbnail/spiritfarer.webp",
+      },
+      modal: {
+        name: "Spiritfarer",
+        languages: [
+          "React",
+          "TypeScript",
+          "Chakra-UI",
+          "Tailwind Css",
+          "Scss",
+          "Framer-Motion",
+        ],
+        description: [
+          "A single landing page showcases a company, what they offer, how everything works, and the benefits.",
+        ],
+        live: "https://osama263.github.io/spiritfarer/",
+        github: "https://github.com/OSAMA263/spiritfarer",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/spiritfarer/pic0.webp",
+          "projects/pc/slider/spiritfarer/pic1.webp",
+          "projects/pc/slider/spiritfarer/pic2.webp",
+          "projects/pc/slider/spiritfarer/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/spiritfarer/pic0.webp",
+          "projects/mobile/slider/spiritfarer/pic1.webp",
+          "projects/mobile/slider/spiritfarer/pic2.webp",
+          "projects/mobile/slider/spiritfarer/pic3.webp",
+        ],
+      },
+    },
+    {
+      completed: true,
+      thumbnail: {
         pc: "projects/pc/thumbnail/arch-studio.webp",
         mobile: "projects/mobile/thumbnail/arch-studio.webp",
       },
@@ -174,36 +211,6 @@ export const ProjectsInfo = [
           "projects/mobile/slider/arch/pic1.webp",
           "projects/mobile/slider/arch/pic2.webp",
           "projects/mobile/slider/arch/pic3.webp",
-        ],
-      },
-    },
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/Designo.webp",
-        mobile: "projects/mobile/thumbnail/Designo.webp",
-      },
-      modal: {
-        name: "Design",
-        languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
-        description: [
-          "Implemented a sample website challenge (Frontend Mentor) using Rotion, Tailwind CSS, and additional CSS styling",
-        ],
-        live: "https://osama263.github.io/Design/",
-        github: "https://github.com/OSAMA263/Design",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/design/pic0.webp",
-          "projects/pc/slider/design/pic1.webp",
-          "projects/pc/slider/design/pic2.webp",
-          "projects/pc/slider/design/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/design/pic0.webp",
-          "projects/mobile/slider/design/pic1.webp",
-          "projects/mobile/slider/design/pic2.webp",
-          "projects/mobile/slider/design/pic3.webp",
         ],
       },
     },
@@ -238,6 +245,36 @@ export const ProjectsInfo = [
           "projects/mobile/slider/ecommerce/pic1.webp",
           "projects/mobile/slider/ecommerce/pic2.webp",
           "projects/mobile/slider/ecommerce/pic3.webp",
+        ],
+      },
+    },
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/Designo.webp",
+        mobile: "projects/mobile/thumbnail/Designo.webp",
+      },
+      modal: {
+        name: "Design",
+        languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
+        description: [
+          "Implemented a sample website challenge (Frontend Mentor) using Rotion, Tailwind CSS, and additional CSS styling",
+        ],
+        live: "https://osama263.github.io/Design/",
+        github: "https://github.com/OSAMA263/Design",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/design/pic0.webp",
+          "projects/pc/slider/design/pic1.webp",
+          "projects/pc/slider/design/pic2.webp",
+          "projects/pc/slider/design/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/design/pic0.webp",
+          "projects/mobile/slider/design/pic1.webp",
+          "projects/mobile/slider/design/pic2.webp",
+          "projects/mobile/slider/design/pic3.webp",
         ],
       },
     },

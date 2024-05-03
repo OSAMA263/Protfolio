@@ -67,4 +67,6 @@ const info = {
     "I'm proficient in Formik, having used it extensively in my projects to streamline form management and validation.",
   swiper:
     "I am well-versed in Swiper, a popular library for creating creating responsive and touch-enabled sliders and carousels.",
+  typescript:
+    "I think it's a powerful language if you're working with a team on a project. It prevents a lot of mistakes from happening. Otherwise,Overrated af i could spend more time writing types than I would fixing bugs if I used JS.",
 };

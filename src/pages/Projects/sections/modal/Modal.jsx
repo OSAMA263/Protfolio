@@ -68,7 +68,7 @@ const ModalHeader = ({ onClose, modal }) => {
 
 // ---------------
 const ModalFooter = ({ modal }) => {
-  console.log(modal.description);
+
   return (
     <AlertDialogFooter className="!justify-start gap-y-2 flex-col max-sm:!p-4">
       <>

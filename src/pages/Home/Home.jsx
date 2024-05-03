@@ -10,7 +10,7 @@ export default function Home() {
         <BgAnimationLogos />
         <WhoAmI />
       </PageWrapper>
-      <TheRealMe />
+      {!localStorage.dont && <TheRealMe />}
     </>
   );
 }

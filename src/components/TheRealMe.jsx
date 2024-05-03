@@ -61,7 +61,7 @@ const Page = ({ easterEgg, setEasterEgg }) => {
             <span className="font-bold underline text-xl">
               What i dont like:
             </span>
-            <p>Humans and brain.</p>
+            <p>Humans</p>
           </div>
         </div>
         {/* lists */}
@@ -98,9 +98,14 @@ const Page = ({ easterEgg, setEasterEgg }) => {
         {/* gj lad */}
         <div>
           <h2>
-            GJ ON FINDING THE TREASURE THINGY, idk, <br /> heres some{" "}
-            <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1&t=3181s">
-              music
+            GJ ON FINDING THE HIDDEN TREASURE THINGY, idk, <br /> heres my
+            secret{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1&t=3181s"
+            >
+              playlist
             </a>{" "}
             to help you suffer less when you code.
           </h2>
@@ -117,11 +122,13 @@ bg-black
 h-[100dvh]
 absolute
 top-0
+bg-[url('/spin-cat.gif')]
 flex
 items-center
 z-[6969]
 w-full
 transition-opacity
+select-text
 [&_a]:text-[#0aff9d]
 `;
 
@@ -132,18 +139,18 @@ const theStuff = [
       "Most of the songs I listen to are from games, and they are all singles, so I'm just going to give you some of the artists I listen to.",
     list: [
       "Daughter",
-      "Andy black",
+      "My Chemical Romance",
+      "Aurora",
       "Slipknot",
       "Joji",
-      "MF Doom",
-      "Gorillaz",
+      "Andy black",
       "Mac Miller",
+      "Of Monsters And Men",
       "Heilung",
-      "If I'm going to die, I gonna listen to these fuckers and die with a big smile on my face.",
-      "Aurora",
-      "My Chemical Romance",
+      "artists that make me feel silly and put a smile on my face.",
       "Siames",
-      "Pretty Vicious",
+      "Gorillaz",
+      "Red Hot Chilli Pepper",
     ],
   },
 
