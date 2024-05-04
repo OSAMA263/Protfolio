@@ -141,6 +141,7 @@ const theStuff = [
       "Daughter",
       "My Chemical Romance",
       "Aurora",
+      "Radiohead",
       "Slipknot",
       "Joji",
       "Andy black",
