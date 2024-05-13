@@ -5,8 +5,7 @@ import { LiaEyeSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import Curtains from "./Curtains";
 import { memo } from "react";
-import { Spinner, useMediaQuery } from "@chakra-ui/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Project = (props) => {
   const [SM] = useMediaQuery("(min-width: 640px)");
@@ -23,12 +22,19 @@ const Project = (props) => {
           whileHover="whileHover"
           animate="animate"
           onClick={() => handleClick(completed, slide, i)}
-          style={{ gridArea: SM ? LgDeviceProjects[i] : SmDeviceProjects[i]}}
+          style={{ gridArea: SM ? LgDeviceProjects[i] : SmDeviceProjects[i] }}
           key={i}
         >
           <Curtains></Curtains>
           {/* thumb nails */}
-          <ThumbNail thumbnail={thumbnail}></ThumbNail>
+          <picture className="w-full">
+            <source media="(max-width:645px )" srcSet={thumbnail.mobile} />
+            <img
+              className="object-cover w-full"
+              alt={thumbnail.pc}
+              src={thumbnail.pc}
+            />
+          </picture>
           {/* eyes icons */}
           <Eyes completed={completed}></Eyes>
           <ProjectTitle id="project-title">{modal.name}</ProjectTitle>
@@ -37,23 +43,6 @@ const Project = (props) => {
     </>
   );
 };
-const ThumbNail = memo(({ thumbnail }) => {
-  return (
-    <picture className="w-full">
-      <source media="(max-width:645px )" srcSet={thumbnail.mobile} />
-      <LazyLoadImage
-        className="object-cover w-full"
-        alt={thumbnail.pc}
-        src={thumbnail.pc}
-        placeholder={
-          <div className="flex items-center justify-center p-24">
-            <Spinner size="xl" className="!p-24 text-4xl"></Spinner>
-          </div>
-        }
-      />
-    </picture>
-  );
-});
 
 const Eyes = memo(({ completed }) => {
   return (
