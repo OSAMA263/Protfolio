@@ -166,11 +166,12 @@ const theStuff = [
       "What Remains of Edith Finch",
       "Before Your Eyes",
       "Fire Watch",
+      "Soma",
       "Journey",
       "Ghost Song",
+      "Coffee Talk",
       "Blasphemous",
       "Kentucky Route Zero",
-      "Coffee Talk",
     ],
   },
   {
