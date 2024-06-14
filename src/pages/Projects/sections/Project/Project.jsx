@@ -8,7 +8,7 @@ import { memo } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Project = (props) => {
-  const [SM] = useMediaQuery("(min-width: 640px)");
+  const [SM] = useMediaQuery("(min-width: 640px)",{ssr:false});
   const { handleProjectClick, slide } = props;
   const handleClick = (completed, slide, i) => {
     completed && handleProjectClick(slide[i]);
@@ -22,7 +22,7 @@ const Project = (props) => {
           whileHover="whileHover"
           animate="animate"
           onClick={() => handleClick(completed, slide, i)}
-          style={{ gridArea: SM ? LgDeviceProjects[i] : SmDeviceProjects[i] }}
+          style={{ gridArea: !SM ? SmDeviceProjects[i]:"" }}
           key={i}
         >
           <Curtains></Curtains>
@@ -72,7 +72,8 @@ bg-[#1f1f1f]
 `;
 
 const GridCell = tw(motion.div)`
-flex
+lg:w-[609px]
+sm:w-[450px]
 relative
 overflow-hidden
 transition-all
@@ -129,7 +130,6 @@ const closeEyeVariants = {
     },
   },
 };
-const LgDeviceProjects = ["1/1/-1/2", "1/2/3/3", "3/2/-1/-1"];
 const SmDeviceProjects = ["", "", "2/1/-1/-1"];
 
 export default Project;

@@ -11,7 +11,7 @@ export default function WhoAmI() {
         a{" "}
         <Frontend>
           <div className="absolute w-full block bottom-0 h-1/2 -z-10 bg-[#128154] right-0 transition-all"></div>
-          react-js
+          front-end
         </Frontend>{" "}
         developer.
       </Line>

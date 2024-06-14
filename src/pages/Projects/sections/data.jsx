@@ -124,6 +124,45 @@ export const ProjectsInfo = [
       },
       modal: {
         name: "Your Apartment",
+        languages: [
+          "ReactJS",
+          "Chakra-UI",
+          "Scss",
+          "Tailwind",
+          "Framer-Motion",
+          "Swiper",
+        ],
+        description: [
+          "dynamic web application facilitating decision-making by calculating optimal choices from user-inputted options and weights.",
+          "Users can input choices, assign weights or probabilities, and receive recommendations based on these inputs.",
+          "Developed with modern web technologies like SCSS,Tailwind, JavaScript and Framer motion, showcasing proficiency in front-end development and problem-solving skills.",
+        ],
+        live: "https://osama263.github.io/maybe/",
+        github: "https://github.com/OSAMA263/maybe",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/your-apartment/pic0.webp",
+          "projects/pc/slider/your-apartment/pic1.webp",
+          "projects/pc/slider/your-apartment/pic2.webp",
+          "projects/pc/slider/your-apartment/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/your-apartment/pic0.webp",
+          "projects/mobile/slider/your-apartment/pic1.webp",
+          "projects/mobile/slider/your-apartment/pic2.webp",
+          "projects/mobile/slider/your-apartment/pic3.webp",
+        ],
+      },
+    },
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/your-apartment.webp",
+        mobile: "projects/mobile/thumbnail/your-apartment.webp",
+      },
+      modal: {
+        name: "Your Apartment",
         languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "Swiper"],
         description: [
           "Developed a website for an apartment rental service with a responsive design.",
@@ -184,36 +223,6 @@ export const ProjectsInfo = [
         ],
       },
     },
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/arch-studio.webp",
-        mobile: "projects/mobile/thumbnail/arch-studio.webp",
-      },
-      modal: {
-        name: "Arch",
-        languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
-        description: [
-          "Created a sample website showcasing a multi-page design with responsive layout.",
-        ],
-        live: "https://osama263.github.io/Arch-/",
-        github: "https://github.com/OSAMA263/Arch-",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/arch/pic0.webp",
-          "projects/pc/slider/arch/pic1.webp",
-          "projects/pc/slider/arch/pic2.webp",
-          "projects/pc/slider/arch/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/arch/pic0.webp",
-          "projects/mobile/slider/arch/pic1.webp",
-          "projects/mobile/slider/arch/pic2.webp",
-          "projects/mobile/slider/arch/pic3.webp",
-        ],
-      },
-    },
   ],
   // slides 3
   [
@@ -249,36 +258,6 @@ export const ProjectsInfo = [
       },
     },
     {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/Designo.webp",
-        mobile: "projects/mobile/thumbnail/Designo.webp",
-      },
-      modal: {
-        name: "Design",
-        languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
-        description: [
-          "Implemented a sample website challenge (Frontend Mentor) using Rotion, Tailwind CSS, and additional CSS styling",
-        ],
-        live: "https://osama263.github.io/Design/",
-        github: "https://github.com/OSAMA263/Design",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/design/pic0.webp",
-          "projects/pc/slider/design/pic1.webp",
-          "projects/pc/slider/design/pic2.webp",
-          "projects/pc/slider/design/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/design/pic0.webp",
-          "projects/mobile/slider/design/pic1.webp",
-          "projects/mobile/slider/design/pic2.webp",
-          "projects/mobile/slider/design/pic3.webp",
-        ],
-      },
-    },
-    {
       completed: false,
       thumbnail: {
         pc: "projects/pc/thumbnail/in-progress.webp",
@@ -294,3 +273,67 @@ export const ProjectsInfo = [
     },
   ],
 ];
+// hell nah
+/*const cute = [
+  {
+    completed: true,
+    thumbnail: {
+      pc: "projects/pc/thumbnail/Designo.webp",
+      mobile: "projects/mobile/thumbnail/Designo.webp",
+    },
+    modal: {
+      name: "Design",
+      languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
+      description: [
+        "Implemented a sample website challenge (Frontend Mentor) using Rotion, Tailwind CSS, and additional CSS styling",
+      ],
+      live: "https://osama263.github.io/Design/",
+      github: "https://github.com/OSAMA263/Design",
+    },
+    sliderImages: {
+      pc: [
+        "projects/pc/slider/design/pic0.webp",
+        "projects/pc/slider/design/pic1.webp",
+        "projects/pc/slider/design/pic2.webp",
+        "projects/pc/slider/design/pic3.webp",
+      ],
+      mobile: [
+        "projects/mobile/slider/design/pic0.webp",
+        "projects/mobile/slider/design/pic1.webp",
+        "projects/mobile/slider/design/pic2.webp",
+        "projects/mobile/slider/design/pic3.webp",
+      ],
+    },
+  },
+  {
+    completed: true,
+    thumbnail: {
+      pc: "projects/pc/thumbnail/arch-studio.webp",
+      mobile: "projects/mobile/thumbnail/arch-studio.webp",
+    },
+    modal: {
+      name: "Arch",
+      languages: ["ReactJS", "Tailwind Css", "Framer-Motion"],
+      description: [
+        "Created a sample website showcasing a multi-page design with responsive layout.",
+      ],
+      live: "https://osama263.github.io/Arch-/",
+      github: "https://github.com/OSAMA263/Arch-",
+    },
+    sliderImages: {
+      pc: [
+        "projects/pc/slider/arch/pic0.webp",
+        "projects/pc/slider/arch/pic1.webp",
+        "projects/pc/slider/arch/pic2.webp",
+        "projects/pc/slider/arch/pic3.webp",
+      ],
+      mobile: [
+        "projects/mobile/slider/arch/pic0.webp",
+        "projects/mobile/slider/arch/pic1.webp",
+        "projects/mobile/slider/arch/pic2.webp",
+        "projects/mobile/slider/arch/pic3.webp",
+      ],
+    },
+  },
+];
+*/

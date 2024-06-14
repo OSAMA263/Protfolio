@@ -20,11 +20,10 @@ body {
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  height: 100dvh;
+  /* height: 100dvh; */
 }
 .parent::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  scroll-behavior: inherit;
   display: none;
 }
 img,
@@ -68,7 +67,7 @@ textarea {
   top: 0;
   display: block;
   height: 100%;
-  width:0px;
+  width: 0px;
 }
 .sides-shadow::before {
   content: "";
@@ -79,7 +78,8 @@ textarea {
   top: 0;
   display: block;
   height: 100%;
-  width:0px;}
+  width: 0px;
+}
 /* myskills left section*/
 .logo-wrapper::after {
   content: "";
@@ -171,7 +171,6 @@ a.active:has(> small:is(:hover)) + h1 {
     #171717
   );
 }
-
 /* -------navbar toggle btn------- */
 .first {
   transform: translateY(-12px);

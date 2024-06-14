@@ -1,15 +1,27 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useScroll } from "framer-motion";
+import React, { useRef } from "react";
 import tw from "tailwind-styled-components";
 
 export default function PageWrapper({ children, id }) {
   const page = useRef(null);
   const isInView = useInView(page, { once: true });
 
+  const projectsRef = useRef(null);
+  const { scrollYProgress} = useScroll({
+    target: projectsRef,
+    offset: ["0 0", "1 1"],
+    layoutEffect: false
+  });
+
   return (
-    <Section id={id}>
+    <Section ref={id === "projects" ? projectsRef : null} $id={id} id={id}>
       <RevealPage ref={page} {...motionVariants} $id={id}>
-        {isInView && children}
+        {isInView &&
+          React.Children.map(children, (child) =>
+            React.cloneElement(child, {
+              scrollProgress: id === "projects" ? scrollYProgress:undefined,
+            })
+          )}
       </RevealPage>
     </Section>
   );
@@ -18,12 +30,17 @@ export default function PageWrapper({ children, id }) {
 const motionVariants = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  transition: { duration: .4, delay: 0.4 },
+  transition: { duration: 0.4, delay: 0.4 },
   viewport: { once: true },
 };
 
 const RevealPage = tw(motion.div)`
-${(p) => p.$id === "home" && "!w-[100%] !mx-0"}
+${(p) =>
+  p.$id === "home"
+    ? "!w-[100%] !mx-0"
+    : p.$id === "projects"
+    ? "!my-0 !sticky !h-[98vh] top-4"
+    : ""}
   flex
   flex-col
   h-[98%]
@@ -42,7 +59,8 @@ ${(p) => p.$id === "home" && "!w-[100%] !mx-0"}
 `;
 
 const Section = tw(motion.section)`
-  scroll-snap
-  flex
-  justify-center
+flex
+justify-center
+scroll-snap
+${({ $id }) => ($id === "projects" ? "sm:!h-[400vh] !items-start mt-4" : "")}
 `;

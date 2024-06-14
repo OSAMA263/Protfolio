@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@chakra-ui/media-query";
+import { useMediaQuery } from "@chakra-ui/react";
 import { motion, useSpring } from "framer-motion";
 import { useRef } from "react";
 import tw from "tailwind-styled-components";
