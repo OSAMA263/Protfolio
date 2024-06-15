@@ -109,10 +109,9 @@ max-[640px]:hidden
 
 const text = [
   "Hello -again!",
-  "Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -information -systems.",
+  "Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -Management -information -systems.",
   "As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.",
   "I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.",
   "I -am -constantly -learning -new -languages -and -tools -and -not -just -relying -on -the -knowledge -i -already -have.",
-
   // "I -am -looking -for -a -job -where -I -can -apply -my -knowledge -and -provide -cool -ass -websites -and -gain -guidance -from -experienced -colleagues.",
 ];
