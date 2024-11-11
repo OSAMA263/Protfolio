@@ -1,5 +1,6 @@
 export const ProjectsInfo = [
   [
+    // e-store
     {
       completed: true,
       thumbnail: {
@@ -39,6 +40,7 @@ export const ProjectsInfo = [
         ],
       },
     },
+    // meditate
     {
       completed: true,
       thumbnail: {
@@ -77,45 +79,7 @@ export const ProjectsInfo = [
         ],
       },
     },
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/constructs.webp",
-        mobile: "projects/mobile/thumbnail/constructs.webp",
-      },
-      modal: {
-        name: "constructs",
-        languages: [
-          "ReactJS",
-          "Chakra-UI",
-          "Framer-Motion",
-          "Tailwind",
-          "Sass",
-        ],
-        description: [
-          "Developed a simple website featuring smooth animations during page navigation and responsiveness for optimal viewing across devices.",
-        ],
-        live: "https://osama263.github.io/constructs/",
-        github: "https://github.com/OSAMA263/constructs",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/constructs/pic0.webp",
-          "projects/pc/slider/constructs/pic1.webp",
-          "projects/pc/slider/constructs/pic2.webp",
-          "projects/pc/slider/constructs/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/constructs/pic0.webp",
-          "projects/mobile/slider/constructs/pic1.webp",
-          "projects/mobile/slider/constructs/pic2.webp",
-          "projects/mobile/slider/constructs/pic3.webp",
-        ],
-      },
-    },
-  ],
-  // slides2
-  [
+    // journey
     {
       completed: true,
       thumbnail: {
@@ -154,6 +118,76 @@ export const ProjectsInfo = [
         ],
       },
     },
+  ],
+  // slides2
+  [
+    // wotah
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/water.webp",
+        mobile: "projects/mobile/thumbnail/water.webp",
+      },
+      modal: {
+        name: "water",
+        languages: ["ReactJS", "Framer-Motion", "Tailwind", "Sass"],
+        description: ["A small portfolio for a company."],
+        live: "https://osama263.github.io/water/",
+        github: "https://github.com/OSAMA263/water",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/water/pic0.webp",
+          "projects/pc/slider/water/pic1.webp",
+          "projects/pc/slider/water/pic2.webp",
+          "projects/pc/slider/water/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/water/pic0.webp",
+          "projects/mobile/slider/water/pic1.webp",
+          "projects/mobile/slider/water/pic2.webp",
+          "projects/mobile/slider/water/pic3.webp",
+        ],
+      },
+    },
+    // constructs
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/constructs.webp",
+        mobile: "projects/mobile/thumbnail/constructs.webp",
+      },
+      modal: {
+        name: "constructs",
+        languages: [
+          "ReactJS",
+          "Chakra-UI",
+          "Framer-Motion",
+          "Tailwind",
+          "Sass",
+        ],
+        description: [
+          "Developed a simple website featuring smooth animations during page navigation and responsiveness for optimal viewing across devices.",
+        ],
+        live: "https://osama263.github.io/constructs/",
+        github: "https://github.com/OSAMA263/constructs",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/constructs/pic0.webp",
+          "projects/pc/slider/constructs/pic1.webp",
+          "projects/pc/slider/constructs/pic2.webp",
+          "projects/pc/slider/constructs/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/constructs/pic0.webp",
+          "projects/mobile/slider/constructs/pic1.webp",
+          "projects/mobile/slider/constructs/pic2.webp",
+          "projects/mobile/slider/constructs/pic3.webp",
+        ],
+      },
+    },
+    // spiritfarer
     {
       completed: true,
       thumbnail: {
@@ -191,6 +225,10 @@ export const ProjectsInfo = [
         ],
       },
     },
+  ],
+  // slides 3
+  [
+    // apartment
     {
       completed: true,
       thumbnail: {
@@ -222,9 +260,6 @@ export const ProjectsInfo = [
         ],
       },
     },
-  ],
-  // slides 3
-  [
     {
       completed: true,
       thumbnail: {

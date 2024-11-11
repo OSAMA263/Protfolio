@@ -176,7 +176,7 @@ const theStuff = [
   },
   {
     title: "Anime",
-    header: "yep.",
-    list: ["https://myanimelist.net/animelist/toeshunter"],
+    header: "yep...dont judge me.",
+    list: ["https://myanimelist.net/animelist/toeshunter?status=7&order=4&order2=0"],
   },
 ];
