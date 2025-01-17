@@ -3,6 +3,7 @@ import ContentWrapper from "../../shared/ContentWrapper";
 import PageWrapper from "../../shared/PageWrapper";
 import SectionHeader from "../../shared/SectionHeader";
 import FormWrapper from "./sections/FormWrapper";
+import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -13,23 +14,35 @@ export default function Contact() {
         </SectionHeader>
         <FormWrapper></FormWrapper>
       </ContentWrapper>
-      <H2>
-        designed and developed by{"\u00A0"}
+      <Socials>
         <a
-          className="text-[#0aff9d] underline-offset-4 underline"
+          href="https://www.linkedin.com/in/osama263"
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/OSAMA263"
         >
-          me
+          <FaLinkedin />
         </a>
-        ;
-      </H2>
+        <a href="https://github.com/OSAMA263" target="_blank" rel="noreferrer">
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.facebook.com/osama.elseify.58"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebook />
+        </a>
+      </Socials>
     </PageWrapper>
   );
 }
 
-const H2 = tw.h2`
-mt-6
-text-center
+const Socials = tw.div`
+flex
+justify-center
+gap-4
+mt-4
+text-2xl
+[&_svg]:text-[#3b3a3a]
+[&_svg:hover]:text-[#08cc7e]
 `;

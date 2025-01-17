@@ -187,6 +187,40 @@ export const ProjectsInfo = [
         ],
       },
     },
+    // sushi
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/suhi.webp",
+        mobile: "projects/mobile/thumbnail/suhi.webp",
+      },
+      modal: {
+        name: "Sushi",
+        languages: ["Nextjs", "Tailwind Css", "Scss", "Framer-Motion"],
+        description: [
+          "A vibrant sushi restaurant offering fresh rolls, sashimi, and a cozy, authentic dining experience.",
+        ],
+        live: "https://osama263.github.io/sushi/",
+        github: "https://github.com/OSAMA263/sushi",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/sushi/pic0.webp",
+          "projects/pc/slider/sushi/pic1.webp",
+          "projects/pc/slider/sushi/pic2.webp",
+          "projects/pc/slider/sushi/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/sushi/pic0.webp",
+          "projects/mobile/slider/sushi/pic1.webp",
+          "projects/mobile/slider/sushi/pic2.webp",
+          "projects/mobile/slider/sushi/pic3.webp",
+        ],
+      },
+    },
+  ],
+  // slides 3
+  [
     // spiritfarer
     {
       completed: true,
@@ -222,72 +256,6 @@ export const ProjectsInfo = [
           "projects/mobile/slider/spiritfarer/pic1.webp",
           "projects/mobile/slider/spiritfarer/pic2.webp",
           "projects/mobile/slider/spiritfarer/pic3.webp",
-        ],
-      },
-    },
-  ],
-  // slides 3
-  [
-    // apartment
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/your-apartment.webp",
-        mobile: "projects/mobile/thumbnail/your-apartment.webp",
-      },
-      modal: {
-        name: "Your Apartment",
-        languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "Swiper"],
-        description: [
-          "Developed a website for an apartment rental service with a responsive design.",
-          "Provided information on rental properties and services in an attractive manner.",
-        ],
-        live: "https://osama263.github.io/Your-Apartment/",
-        github: "https://github.com/OSAMA263/Your-Apartment",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/your-apartment/pic0.webp",
-          "projects/pc/slider/your-apartment/pic1.webp",
-          "projects/pc/slider/your-apartment/pic2.webp",
-          "projects/pc/slider/your-apartment/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/your-apartment/pic0.webp",
-          "projects/mobile/slider/your-apartment/pic1.webp",
-          "projects/mobile/slider/your-apartment/pic2.webp",
-          "projects/mobile/slider/your-apartment/pic3.webp",
-        ],
-      },
-    },
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/E-commerce.webp",
-        mobile: "projects/mobile/thumbnail/E-commerce.webp",
-      },
-      modal: {
-        name: "E-commerce (firstApp)",
-        languages: ["ReactJS", "Redux", "Bootstrap", "Sass"],
-        description: [
-          "Developed an E-commerce application with multiple pages including home, shop, product details, checkout, and cart.",
-          "Utilized Redux for  state management.",
-        ],
-        live: "https://osama263.github.io/ecommerce-app/",
-        github: "https://github.com/OSAMA263/ecommerce-app",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/ecommerce/pic0.webp",
-          "projects/pc/slider/ecommerce/pic1.webp",
-          "projects/pc/slider/ecommerce/pic2.webp",
-          "projects/pc/slider/ecommerce/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/ecommerce/pic0.webp",
-          "projects/mobile/slider/ecommerce/pic1.webp",
-          "projects/mobile/slider/ecommerce/pic2.webp",
-          "projects/mobile/slider/ecommerce/pic3.webp",
         ],
       },
     },
