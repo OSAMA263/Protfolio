@@ -30,12 +30,15 @@ export default function Slider({ sliderImages }) {
     <>
       <Swiper {...swiperProps} className="rounded-xl">
         {sliderImages.pc.map((_, i) => (
-          <SwiperSlide key={i} className="rounded-xl">
+          <SwiperSlide
+            key={i}
+            className="rounded-xl flex items-center justify-center "
+          >
             <Pictures {...{ sliderImages, i }} />
           </SwiperSlide>
         ))}
       </Swiper>
-      <NavigationButtons {...{ sliderImages, activeInd }}></NavigationButtons>
+      <NavigationButtons {...{ sliderImages, activeInd }} />
     </>
   );
 }

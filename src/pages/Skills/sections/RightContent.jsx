@@ -4,8 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function RightContent({ selectedLang }) {
   return (
     <Wrapper>
-      <AnimatePresence mode="popLayout">
-        <Information key={selectedLang} {...Information_variants}>
+      <AnimatePresence mode="wait">
+        <Information
+          layout={selectedLang}
+          key={selectedLang}
+          {...Information_variants}
+        >
           {info[selectedLang]}
         </Information>
       </AnimatePresence>
@@ -15,11 +19,11 @@ export default function RightContent({ selectedLang }) {
 
 const Information_variants = {
   initial: {
-    y: "-100%",
+    opacity: 0,
   },
-  animate: { y: "0%" },
-  exit: { y: "200%" },
-  transition: { duration: 1 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.2 },
 };
 
 const Information = tw(motion.p)`

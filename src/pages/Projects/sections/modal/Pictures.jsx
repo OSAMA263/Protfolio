@@ -4,10 +4,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Pictures({ sliderImages ,i}) {
 
   return (
-    <picture>
+    <picture className="rounded-lg w-fit overflow-hidden">
       <source media="(max-width: 645px)" srcSet={sliderImages.mobile[i]} />
       <LazyLoadImage
-        className="object-center w-full"
+        className="object-cover bg-center"
         alt={sliderImages.pc[i]}
         src={sliderImages.pc[i]}
         placeholder={

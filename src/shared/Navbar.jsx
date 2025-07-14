@@ -65,7 +65,7 @@ absolute
 left-1
 transition-all
 duration-500
-p-[4.5px]
+p-[5px]
 border-gray-500
 border-2
 `;

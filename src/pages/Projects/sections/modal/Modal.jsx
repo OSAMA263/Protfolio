@@ -21,8 +21,8 @@ export default function Modal(props) {
         <AlertDialogContent maxW={900} className="!bg-transparent">
           {/* header */}
           <ModalHeader {...{ onClose, modal }}></ModalHeader>
-          {/* body */}
-          <AlertDialogBody className="max-[640px]:w-[80%] max-[640px]:mx-auto !p-0">
+          {/* body */}-
+          <AlertDialogBody className="max-[640px]:w-[80%] relative max-[640px]:mx-auto !p-0">
             <Slider sliderImages={sliderImages} />
           </AlertDialogBody>
           {/* footer */}
@@ -68,11 +68,10 @@ const ModalHeader = ({ onClose, modal }) => {
 
 // ---------------
 const ModalFooter = ({ modal }) => {
-
   return (
     <AlertDialogFooter className="!justify-start gap-y-2 flex-col max-sm:!p-4">
       <>
-        <ul className="list-disc [&>li::marker]:text-[#0aff9d] [&>li::marker]:sm:text-xl text-sm space-y-2">
+        <ul className="list-disc mx-4 [&>li::marker]:text-[#0aff9d] max-sm:text-sm text-lg space-y-2">
           {modal.description.map((point, i) => (
             <li className="text-gray-300 [text-wrap:pretty]" key={"point" + i}>
               {point}

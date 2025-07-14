@@ -10,7 +10,7 @@ export default function WhoAmI() {
       <Line>
         a{" "}
         <Frontend>
-          <div className="absolute w-full block bottom-0 h-1/2 -z-10 bg-[#128154] right-0 transition-all"></div>
+          <div className="absolute w-full block bottom-0 h-1/2 -z-10 bg-[#12a369] right-0 transition-all"></div>
           front-end
         </Frontend>{" "}
         developer.
@@ -52,7 +52,7 @@ hover:bg-[#0aff9d]
 hover:text-black
 hover:border-transparent
 flex
-sm:p-3
+sm:p-2
 p-1
 rounded-md
 justify-center

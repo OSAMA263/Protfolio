@@ -63,7 +63,7 @@ px-4
 hidden
 absolute
 left-1/2 
-duration-700
+duration-300
 top-10 
 -translate-x-1/2
 transition-all
@@ -72,12 +72,12 @@ bg-[#1f1f1f]
 `;
 
 const GridCell = tw(motion.div)`
-lg:w-[609px]
-sm:w-[450px]
+lg:w-[509px]
+sm:w-[400px]
 relative
 overflow-hidden
 transition-all
-duration-500
+duration-300
 rounded-xl
 [&>picture>img]:hover:scale-[1.05]
 [&>picture>img]:brightness-[.8]
@@ -97,7 +97,7 @@ top-1/2
 bg-[#1f1f1f] 
 -translate-y-1/2
 transition-all
-duration-500
+duration-300
 `;
 
 const Eye = tw(motion.span)`
@@ -112,7 +112,7 @@ const openEyeVariants = {
     opacity: [0, 0, 0.5, 1],
     transition: {
       repeat: Infinity,
-      repeatDelay: 1.1,
+      repeatDelay:.8,
       duration: 0.5,
     },
   },
@@ -125,7 +125,7 @@ const closeEyeVariants = {
     opacity: [1, 1, 0.5, 0],
     transition: {
       repeat: Infinity,
-      repeatDelay: 1.1,
+      repeatDelay: .8,
       duration: 0.5,
     },
   },

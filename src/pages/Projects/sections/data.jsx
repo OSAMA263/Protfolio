@@ -40,6 +40,40 @@ export const ProjectsInfo = [
         ],
       },
     },
+    // cafe
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/cafe.webp",
+        mobile: "projects/mobile/thumbnail/cafe.webp",
+      },
+      modal: {
+        name: "cafe",
+        languages: ["ReactJS", "Tailwind Css", "Framer-Motion", "APi"],
+        description: [
+          "Displays lunch, dinner, and tea menus fetched live from a JSON server API.",
+          "Allows you to add, edit and delete menu items from the front end.",
+          "Hosted api the on Vercel to keep the backend API active and responsive.",
+          "Built with responsive design and smooth interactions for easy navigation and management.",
+        ],
+        live: "https://osama263.github.io/cafe/",
+        github: "https://github.com/OSAMA263/cafe",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/cafe/pic0.webp",
+          "projects/pc/slider/cafe/pic1.webp",
+          "projects/pc/slider/cafe/pic2.webp",
+          "projects/pc/slider/cafe/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/cafe/pic0.webp",
+          "projects/mobile/slider/cafe/pic1.webp",
+          "projects/mobile/slider/cafe/pic2.webp",
+          "projects/mobile/slider/cafe/pic3.webp",
+        ],
+      },
+    },
     // meditate
     {
       completed: true,
@@ -79,6 +113,9 @@ export const ProjectsInfo = [
         ],
       },
     },
+  ],
+  // slides2
+  [
     // journey
     {
       completed: true,
@@ -115,38 +152,6 @@ export const ProjectsInfo = [
           "projects/mobile/slider/journey/pic1.webp",
           "projects/mobile/slider/journey/pic2.webp",
           "projects/mobile/slider/journey/pic3.webp",
-        ],
-      },
-    },
-  ],
-  // slides2
-  [
-    // wotah
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/water.webp",
-        mobile: "projects/mobile/thumbnail/water.webp",
-      },
-      modal: {
-        name: "water",
-        languages: ["ReactJS", "Framer-Motion", "Tailwind", "Sass"],
-        description: ["A small portfolio for a company."],
-        live: "https://osama263.github.io/water/",
-        github: "https://github.com/OSAMA263/water",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/water/pic0.webp",
-          "projects/pc/slider/water/pic1.webp",
-          "projects/pc/slider/water/pic2.webp",
-          "projects/pc/slider/water/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/water/pic0.webp",
-          "projects/mobile/slider/water/pic1.webp",
-          "projects/mobile/slider/water/pic2.webp",
-          "projects/mobile/slider/water/pic3.webp",
         ],
       },
     },
@@ -221,6 +226,35 @@ export const ProjectsInfo = [
   ],
   // slides 3
   [
+    // wotah
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/water.webp",
+        mobile: "projects/mobile/thumbnail/water.webp",
+      },
+      modal: {
+        name: "water",
+        languages: ["ReactJS", "Framer-Motion", "Tailwind", "Sass"],
+        description: ["A small portfolio for a company."],
+        live: "https://osama263.github.io/water/",
+        github: "https://github.com/OSAMA263/water",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/water/pic0.webp",
+          "projects/pc/slider/water/pic1.webp",
+          "projects/pc/slider/water/pic2.webp",
+          "projects/pc/slider/water/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/water/pic0.webp",
+          "projects/mobile/slider/water/pic1.webp",
+          "projects/mobile/slider/water/pic2.webp",
+          "projects/mobile/slider/water/pic3.webp",
+        ],
+      },
+    },
     // spiritfarer
     {
       completed: true,

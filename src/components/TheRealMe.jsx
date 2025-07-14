@@ -65,7 +65,7 @@ const Page = ({ easterEgg, setEasterEgg }) => {
           </div>
         </div>
         {/* lists */}
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-10">
           {theStuff.map(({ title, list, header }) => (
             <div className="space-y-4" key={title}>
               <h1>{header}</h1>
@@ -73,24 +73,16 @@ const Page = ({ easterEgg, setEasterEgg }) => {
                 {title}:
               </span>
               <ul>
-                {list.map((item) =>
-                  item.includes("http") ? (
-                    <li className="list-disc" key={item}>
-                      <a target="_blank" rel="noreferrer" href={item}>
-                        {item}
-                      </a>
-                    </li>
-                  ) : (
-                    <li
-                      className={
-                        item.length > 30 ? "font-bold underline" : "list-disc"
-                      }
-                      key={item}
-                    >
-                      {item}
-                    </li>
-                  )
-                )}
+                {list.map((item) => (
+                  <li
+                    className={
+                      item.length > 30 ? "font-bold underline" : "list-disc"
+                    }
+                    key={item}
+                  >
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -120,6 +112,7 @@ ${({ $opend }) =>
   $opend ? "visible opacity-100 delay-[3s]" : "invisible opacity-0"}
 bg-black
 h-[100dvh]
+overflow-auto
 absolute
 top-0
 bg-[url('/spin-cat.gif')]
@@ -162,21 +155,37 @@ const theStuff = [
     list: [
       "Gris",
       "Spiritfarer",
-      "Transistor",
+      "Outer Wilds",
       "What Remains of Edith Finch",
+      "Disco Elysium",
+      "Fear & Hunger",
+      "Blasphemous",
       "Before Your Eyes",
       "Fire Watch",
       "Soma",
-      "Journey",
       "Ghost Song",
-      "Coffee Talk",
-      "Blasphemous",
       "Kentucky Route Zero",
+      "Coffee Talk",
     ],
   },
   {
     title: "Anime",
-    header: "yep...dont judge me.",
-    list: ["https://myanimelist.net/animelist/toeshunter?status=7&order=4&order2=0"],
+    header:
+      "dont you fucking judge me, we all got a thing that we love and other ppl dont like it",
+    list: [
+      "Clannad: After Story",
+      "The Garden of Words",
+      "D-Frag",
+      "WataMote",
+      "Josee, the Tiger and the Fish",
+      "Chainsaw Man",
+      "Violet Evergarden",
+      "Asobi Asobase",
+      "Orb",
+      "Barakamon",
+      "Wagnaria",
+      "To Your Eternity",
+      "A Silent Voice",
+    ],
   },
 ];

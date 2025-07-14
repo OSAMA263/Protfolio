@@ -88,6 +88,7 @@ xl:grid-cols-2
 xl:gap-y-0
 items-center
 gap-y-6
+text-lg
 max-[375px]:!grid-rows-1
 max-[350px]:text-sm
 `;
@@ -108,10 +109,20 @@ max-[640px]:hidden
 `;
 
 const text = [
-  "Hello -again!",
-  "Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -Management -information -systems.",
-  "As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.",
-  "I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.",
-  "I -am -constantly -learning -new -languages -and -tools -and -not -just -relying -on -the -knowledge -i -already -have.",
-  // "I -am -looking -for -a -job -where -I -can -apply -my -knowledge -and -provide -cool -ass -websites -and -gain -guidance -from -experienced -colleagues.",
+  "Hi -I’m -Osama, -a -front–end -developer -with -a -passion -for -creating -clean, -responsive, -user–friendly -sites.",
+
+  "I -also -did -a -4–month -internship -where -I -worked -with -a -team, -so -I'm -comfortable -in -both -solo -and -team -environments.",
+
+  "I -work -best -on -solo -projects -because -I -can -stay -organized -and -know -where -everything -is. -There -are -no -conflicts -or -unexpected -changes, -and -I -understand -all -the -code. -This -helps -me -finish -faster -and -keep -everything -easy -to -manage.",
+
+  "I'm -always -learning -and -improving -my -UI/UX -skills. -Whether -it's -a -personal -project -or -teamwork, -I -enjoy -turning -ideas -into -functional, -beautiful -websites.",
 ];
+
+// const text = [
+//   "Hello -again!",
+//   "Graduated -from -Delta -Academy -of -Science -with -a -bachelor's -degree -in -Management -information -systems.",
+//   "As -a -FrontEnd -developer, -I -use -React -alongside -with -important -libraries -like -Tailwind -for -styling -and -ChakraUI -for -superior -user -interface -elements.",
+//   "I -mostly -concentrate -on -useing -Framer -Motion -primarily -to -create -charming -visuals -for -my -web -development -projects.",
+//   "I -am -constantly -learning -new -languages -and -tools -and -not -just -relying -on -the -knowledge -i -already -have.",
+//   // "I -am -looking -for -a -job -where -I -can -apply -my -knowledge -and -provide -cool -ass -websites -and -gain -guidance -from -experienced -colleagues.",
+// ];
