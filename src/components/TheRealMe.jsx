@@ -95,7 +95,7 @@ const Page = ({ easterEgg, setEasterEgg }) => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1&t=3181s"
+              href="https://www.youtube.com/watch?v=SBOVkptjJhE&list=PL2X8sfba3pG0robKHaL3S30CWye2_QBzW&index=1"
             >
               playlist
             </a>{" "}
