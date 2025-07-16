@@ -111,7 +111,7 @@ max-[640px]:hidden
 const text = [
   "Hi -I’m -Osama, -a -front–end -developer -with -a -passion -for -creating -clean, -responsive, -user–friendly -sites.",
 
-  "I -also -did -a -4–month -internship -where -I -worked -with -a -team, -so -I'm -comfortable -in -both -solo -and -team -environments.",
+  "I -also -did -a -6–month -internship -where -I -worked -with -a -team, -so -I'm -comfortable -in -both -solo -and -team -environments.",
 
   "I -work -best -on -solo -projects -because -I -can -stay -organized -and -know -where -everything -is. -There -are -no -conflicts -or -unexpected -changes, -and -I -understand -all -the -code. -This -helps -me -finish -faster -and -keep -everything -easy -to -manage.",
 

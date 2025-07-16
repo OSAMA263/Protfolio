@@ -10,9 +10,10 @@ export const ProjectsInfo = [
       modal: {
         name: "E-store",
         languages: [
-          "ReactJS",
           "Redux",
+          "ReactJS",
           "Chakra-UI",
+          "API",
           "Swiper",
           "Tailwind",
           "Css",
@@ -74,6 +75,72 @@ export const ProjectsInfo = [
         ],
       },
     },
+    // // education
+    // {
+    //   completed: true,
+    //   thumbnail: {
+    //     pc: "projects/pc/thumbnail/edu.webp",
+    //     mobile: "projects/mobile/thumbnail/edu.webp",
+    //   },
+    //   modal: {
+    //     name: "EduPress",
+    //     languages: ["React.js", "Shadcn", "Tailwind", "API"],
+    //     description: [
+    //       "Collaborated on a responsive web app with role-based access for students and admins.",
+    //       "Developed secure authentication with custom login and signup for both user types.",
+    //       "Worked closely with a backend developer to define and optimize API endpoints for seamless integration.",
+    //     ],
+    //     live: "https://web-master-intern-workshop-2-e-lear.vercel.app/",
+    //     github:
+    //       "https://github.com/OSAMA263/web-master-intern-workshop-2-e-learning-platform",
+    //   },
+    //   sliderImages: {
+    //     pc: [
+    //       "projects/pc/slider/edu/pic0.webp",
+    //       "projects/pc/slider/edu/pic1.webp",
+    //       "projects/pc/slider/edu/pic2.webp",
+    //       "projects/pc/slider/edu/pic3.webp",
+    //     ],
+    //     mobile: [
+    //       "projects/mobile/slider/edu/pic0.webp",
+    //       "projects/mobile/slider/edu/pic1.webp",
+    //       "projects/mobile/slider/edu/pic2.webp",
+    //       "projects/mobile/slider/edu/pic3.webp",
+    //     ],
+    //   },
+    // },
+       // wotah
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/water.webp",
+        mobile: "projects/mobile/thumbnail/water.webp",
+      },
+      modal: {
+        name: "water",
+        languages: ["ReactJS", "Framer-Motion", "Tailwind", "Sass"],
+        description: ["A small portfolio for a company."],
+        live: "https://osama263.github.io/water/",
+        github: "https://github.com/OSAMA263/water",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/water/pic0.webp",
+          "projects/pc/slider/water/pic1.webp",
+          "projects/pc/slider/water/pic2.webp",
+          "projects/pc/slider/water/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/water/pic0.webp",
+          "projects/mobile/slider/water/pic1.webp",
+          "projects/mobile/slider/water/pic2.webp",
+          "projects/mobile/slider/water/pic3.webp",
+        ],
+      },
+    },
+  ],
+  // slides2
+  [
     // meditate
     {
       completed: true,
@@ -113,9 +180,6 @@ export const ProjectsInfo = [
         ],
       },
     },
-  ],
-  // slides2
-  [
     // journey
     {
       completed: true,
@@ -192,37 +256,6 @@ export const ProjectsInfo = [
         ],
       },
     },
-    // sushi
-    {
-      completed: true,
-      thumbnail: {
-        pc: "projects/pc/thumbnail/suhi.webp",
-        mobile: "projects/mobile/thumbnail/suhi.webp",
-      },
-      modal: {
-        name: "Sushi",
-        languages: ["Nextjs", "Tailwind Css", "Scss", "Framer-Motion"],
-        description: [
-          "A vibrant sushi restaurant offering fresh rolls, sashimi, and a cozy, authentic dining experience.",
-        ],
-        live: "https://osama263.github.io/sushi/",
-        github: "https://github.com/OSAMA263/sushi",
-      },
-      sliderImages: {
-        pc: [
-          "projects/pc/slider/sushi/pic0.webp",
-          "projects/pc/slider/sushi/pic1.webp",
-          "projects/pc/slider/sushi/pic2.webp",
-          "projects/pc/slider/sushi/pic3.webp",
-        ],
-        mobile: [
-          "projects/mobile/slider/sushi/pic0.webp",
-          "projects/mobile/slider/sushi/pic1.webp",
-          "projects/mobile/slider/sushi/pic2.webp",
-          "projects/mobile/slider/sushi/pic3.webp",
-        ],
-      },
-    },
   ],
   // slides 3
   [
@@ -252,6 +285,37 @@ export const ProjectsInfo = [
           "projects/mobile/slider/water/pic1.webp",
           "projects/mobile/slider/water/pic2.webp",
           "projects/mobile/slider/water/pic3.webp",
+        ],
+      },
+    },
+    // sushi
+    {
+      completed: true,
+      thumbnail: {
+        pc: "projects/pc/thumbnail/suhi.webp",
+        mobile: "projects/mobile/thumbnail/suhi.webp",
+      },
+      modal: {
+        name: "Sushi",
+        languages: ["Nextjs", "Tailwind Css", "Scss", "Framer-Motion"],
+        description: [
+          "A vibrant sushi restaurant offering fresh rolls, sashimi, and a cozy, authentic dining experience.",
+        ],
+        live: "https://osama263.github.io/sushi/",
+        github: "https://github.com/OSAMA263/sushi",
+      },
+      sliderImages: {
+        pc: [
+          "projects/pc/slider/sushi/pic0.webp",
+          "projects/pc/slider/sushi/pic1.webp",
+          "projects/pc/slider/sushi/pic2.webp",
+          "projects/pc/slider/sushi/pic3.webp",
+        ],
+        mobile: [
+          "projects/mobile/slider/sushi/pic0.webp",
+          "projects/mobile/slider/sushi/pic1.webp",
+          "projects/mobile/slider/sushi/pic2.webp",
+          "projects/mobile/slider/sushi/pic3.webp",
         ],
       },
     },
@@ -293,6 +357,8 @@ export const ProjectsInfo = [
         ],
       },
     },
+  ],
+  [
     {
       completed: false,
       thumbnail: {
