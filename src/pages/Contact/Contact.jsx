@@ -16,7 +16,7 @@ export default function Contact() {
       </ContentWrapper>
       <Socials>
         <a
-          href="https://www.linkedin.com/in/osama263"
+          href="https://www.linkedin.com/in/osama00"
           target="_blank"
           rel="noreferrer"
         >

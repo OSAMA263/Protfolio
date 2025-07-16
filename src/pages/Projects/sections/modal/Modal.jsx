@@ -21,7 +21,7 @@ export default function Modal(props) {
         <AlertDialogContent maxW={900} className="!bg-transparent">
           {/* header */}
           <ModalHeader {...{ onClose, modal }}></ModalHeader>
-          {/* body */}-
+          {/* body */}
           <AlertDialogBody className="max-[640px]:w-[80%] relative max-[640px]:mx-auto !p-0">
             <Slider sliderImages={sliderImages} />
           </AlertDialogBody>
