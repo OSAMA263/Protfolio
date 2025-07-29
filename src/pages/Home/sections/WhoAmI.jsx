@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 import { AiOutlineDownload } from "react-icons/ai";
